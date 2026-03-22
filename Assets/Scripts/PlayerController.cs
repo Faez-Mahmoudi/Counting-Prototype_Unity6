@@ -49,5 +49,25 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.forward * 10, ForceMode.Impulse);
             //playerAudio.PlayOneShot(groundSound, 1.0f);
         }
+        else if (other.gameObject.CompareTag("UpLeft"))
+        {
+            playerRb.AddForce((Vector3.forward + Vector3.down) * 10, ForceMode.Impulse);
+            //playerAudio.PlayOneShot(groundSound, 1.0f);
+        }
+        else if (other.gameObject.CompareTag("UpRight"))
+        {
+            playerRb.AddForce((Vector3.down + Vector3.back) * 10, ForceMode.Impulse);
+            //playerAudio.PlayOneShot(groundSound, 1.0f);
+        }
+        else if (other.gameObject.CompareTag("DownRight"))
+        {
+            playerRb.AddForce((Vector3.up + Vector3.back) * 10, ForceMode.Impulse);
+            //playerAudio.PlayOneShot(groundSound, 1.0f);
+        }
+        else if (other.gameObject.CompareTag("DownLeft"))
+        {
+            playerRb.AddForce((Vector3.up + Vector3.forward) * 10, ForceMode.Impulse);
+            //playerAudio.PlayOneShot(groundSound, 1.0f);
+        }
     }
 }

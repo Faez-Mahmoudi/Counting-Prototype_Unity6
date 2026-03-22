@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 17888572}
   m_Layer: 0
   m_Name: UpLeft
-  m_TagString: Untagged
+  m_TagString: UpLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 225715905}
   m_Layer: 0
   m_Name: DownLeft
-  m_TagString: Untagged
+  m_TagString: DownLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 1105081335}
   m_Layer: 0
   m_Name: DownRight
-  m_TagString: Untagged
+  m_TagString: DownRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1553,7 +1553,7 @@ GameObject:
   - component: {fileID: 1633859625}
   m_Layer: 0
   m_Name: UpLeft
-  m_TagString: Untagged
+  m_TagString: UpLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1798,7 +1798,7 @@ GameObject:
   - component: {fileID: 1734162454}
   m_Layer: 0
   m_Name: UpRight
-  m_TagString: Untagged
+  m_TagString: UpRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2036,7 +2036,7 @@ Transform:
   m_GameObject: {fileID: 1748266270}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 3.82}
+  m_LocalPosition: {x: 0, y: 0.2, z: 5.4}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
