@@ -3,6 +3,7 @@ using UnityEngine;
 public class Border : MonoBehaviour
 {
     [SerializeField] private float playerForce;
+    [SerializeField] private float ballForce;
     [SerializeField] private Vector3 forceDirection;
 
     private void OnCollisionEnter(Collision collision)
@@ -11,7 +12,11 @@ public class Border : MonoBehaviour
         {
             Rigidbody playerRb = collision.gameObject.GetComponent<Rigidbody>();
             playerRb.AddForce(forceDirection * playerForce, ForceMode.Impulse);
-            //playerAudio.PlayOneShot(groundSound, 1.0f);
+        }
+        else if (collision.gameObject.CompareTag("Ball"))
+        {
+            Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
+            ballRb.AddForce(forceDirection * ballForce, ForceMode.Impulse);
         }
     }
 }

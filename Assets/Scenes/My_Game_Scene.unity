@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 17888575}
   m_Layer: 0
   m_Name: UpLeft
-  m_TagString: UpLeft
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerForce: 10
+  ballForce: 3
   forceDirection: {x: 0, y: -1, z: 1}
 --- !u!1 &225715903
 GameObject:
@@ -256,7 +257,7 @@ GameObject:
   - component: {fileID: 225715908}
   m_Layer: 0
   m_Name: DownLeft
-  m_TagString: DownLeft
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,6 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerForce: 10
+  ballForce: 3
   forceDirection: {x: 0, y: 1, z: 1}
 --- !u!1 &250417154
 GameObject:
@@ -664,6 +666,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 59894442420690999, guid: cd3f04758a943204f91e0c017f295e3b, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 646969936768368765, guid: cd3f04758a943204f91e0c017f295e3b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 70e6a4fead6ee7d4ea2d545391f94a85, type: 2}
     - target: {fileID: 1857333457934814950, guid: cd3f04758a943204f91e0c017f295e3b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -722,7 +732,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7308879587419532901, guid: cd3f04758a943204f91e0c017f295e3b, type: 3}
       propertyPath: m_Name
-      value: Sphere
+      value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308879587419532901, guid: cd3f04758a943204f91e0c017f295e3b, type: 3}
+      propertyPath: m_TagString
+      value: Ball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -928,7 +942,7 @@ GameObject:
   - component: {fileID: 1105081338}
   m_Layer: 0
   m_Name: DownRight
-  m_TagString: DownRight
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1035,6 +1049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerForce: 10
+  ballForce: 3
   forceDirection: {x: 0, y: 1, z: -1}
 --- !u!1 &1219981616
 GameObject:
@@ -1271,7 +1286,7 @@ GameObject:
   - component: {fileID: 1278613321}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Right
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1378,6 +1393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerForce: 10
+  ballForce: 3
   forceDirection: {x: 0, y: 0, z: -1}
 --- !u!1 &1427032441
 GameObject:
@@ -1751,7 +1767,7 @@ GameObject:
   - component: {fileID: 1734162457}
   m_Layer: 0
   m_Name: UpRight
-  m_TagString: UpRight
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1858,6 +1874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerForce: 10
+  ballForce: 3
   forceDirection: {x: 0, y: -1, z: -1}
 --- !u!1 &1748266270
 GameObject:
@@ -1893,6 +1910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1200
+  powerStrength: 4
 --- !u!54 &1748266272
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2165,7 +2183,7 @@ GameObject:
   - component: {fileID: 1915459721}
   m_Layer: 0
   m_Name: Up
-  m_TagString: Up
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2272,6 +2290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerForce: 10
+  ballForce: 3
   forceDirection: {x: 0, y: -1, z: 0}
 --- !u!1 &2020091815
 GameObject:
@@ -2398,7 +2417,7 @@ GameObject:
   - component: {fileID: 2067397615}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Left
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2505,6 +2524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerForce: 10
+  ballForce: 3
   forceDirection: {x: 0, y: 0, z: 1}
 --- !u!1 &2076749171
 GameObject:
@@ -2560,7 +2580,7 @@ GameObject:
   - component: {fileID: 2117250459}
   m_Layer: 0
   m_Name: Down
-  m_TagString: Down
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2667,6 +2687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerForce: 10
+  ballForce: 3
   forceDirection: {x: 0, y: 1, z: 0}
 --- !u!1 &2131221668
 GameObject:
