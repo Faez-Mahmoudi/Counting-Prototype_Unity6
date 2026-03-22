@@ -25,4 +25,29 @@ public class PlayerController : MonoBehaviour
         //transform.Translate(Vector3.up * Time.deltaTime * speed * verticalInput);
         //transform.Translate(Vector3.forward * Time.deltaTime * speed * horizontalInput);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        // if player collides with the ground, addforce*up and play sound
+        if (other.gameObject.CompareTag("Down"))
+        {
+            playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+            //playerAudio.PlayOneShot(groundSound, 1.0f);
+        }
+        else if (other.gameObject.CompareTag("Up"))
+        {
+            playerRb.AddForce(Vector3.down * 10, ForceMode.Impulse);
+            //playerAudio.PlayOneShot(groundSound, 1.0f);
+        }
+        else if (other.gameObject.CompareTag("Right"))
+        {
+            playerRb.AddForce(Vector3.back * 10, ForceMode.Impulse);
+            //playerAudio.PlayOneShot(groundSound, 1.0f);
+        }
+        else if (other.gameObject.CompareTag("Left"))
+        {
+            playerRb.AddForce(Vector3.forward * 10, ForceMode.Impulse);
+            //playerAudio.PlayOneShot(groundSound, 1.0f);
+        }
+    }
 }
