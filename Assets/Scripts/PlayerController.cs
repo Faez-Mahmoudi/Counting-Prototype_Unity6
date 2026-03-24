@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 1000.0f;
-    [SerializeField] private float powerStrength = 1000.0f;
+    [SerializeField] private float powerStrength = 3.0f;
     private Rigidbody playerRb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
