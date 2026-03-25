@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
         playerRb.AddForce(Vector3.forward * Time.deltaTime * speed * horizontalInput);
 
         transform.rotation = Quaternion.identity;
+        if (transform.position.x != 0)
+            Debug.Log("Somthing went wrong");
     }
 
     private void OnCollisionEnter(Collision collision)
