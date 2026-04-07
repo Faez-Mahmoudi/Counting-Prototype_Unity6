@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class GoalCounter : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private int Count = 0;
+    //[SerializeField] private int ID = 0;
+
+    private void Start()
     {
-        
+        Count = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if(other.gameObject.CompareTag("Ball"))
+        {
+            Count += 1;
+        }
     }
 }
