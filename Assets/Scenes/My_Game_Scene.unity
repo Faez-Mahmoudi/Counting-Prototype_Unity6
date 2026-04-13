@@ -600,10 +600,46 @@ PrefabInstance:
       propertyPath: pointText
       value: 
       objectReference: {fileID: 2115883373}
+    - target: {fileID: 5358769218829031686, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Color.g
+      value: 0.08627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358769218829031686, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9490197
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358769218829031686, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Intensity
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384343988047373761, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Color.g
+      value: 0.08627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384343988047373761, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9490197
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384343988047373761, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Intensity
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7374787190967721542, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 377ee068325d93e4d80c00f6a68def36, type: 2}
+    - target: {fileID: 7627517939490409264, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Color.g
+      value: 0.08627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627517939490409264, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9490197
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627517939490409264, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Intensity
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7800997387709468575, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1888,7 +1924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &697209780
 Transform:
   m_ObjectHideFlags: 0
@@ -3896,7 +3932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1613224252
 Transform:
   m_ObjectHideFlags: 0
