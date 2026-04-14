@@ -5,15 +5,7 @@ public class DigitalNumber : MonoBehaviour
     [SerializeField] private GameObject[] digitalLamps;
     [SerializeField] private Material matUnlit;
     [SerializeField] private Material matLit;
-    [SerializeField] private int num;
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-            ShowNumber(num);
-    }
-
+    
     public void ShowNumber(int n)
     {
         foreach (var item in digitalLamps)
