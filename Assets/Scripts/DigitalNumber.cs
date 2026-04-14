@@ -5,19 +5,13 @@ public class DigitalNumber : MonoBehaviour
     [SerializeField] private GameObject[] digitalLamps;
     [SerializeField] private Material matUnlit;
     [SerializeField] private Material matLit;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        //Renderer renderer = digitalLamps[0].GetComponent<Renderer>();
-        //cubeMaterial = renderer.material;
-    }
+    [SerializeField] private int num;
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
-            ShowNumber(1);
+            ShowNumber(num);
     }
 
     public void ShowNumber(int n)
@@ -31,10 +25,7 @@ public class DigitalNumber : MonoBehaviour
         {
             case 0:
             {
-                foreach (var item in digitalLamps)
-                {
-                    item.GetComponent<Renderer>().material = matLit;
-                }
+                ShowNumber(8);
                 digitalLamps[1].GetComponent<Renderer>().material = matUnlit;
                 break;
             }
@@ -42,6 +33,62 @@ public class DigitalNumber : MonoBehaviour
             {
                 digitalLamps[3].GetComponent<Renderer>().material = matLit;
                 digitalLamps[4].GetComponent<Renderer>().material = matLit;
+                break;
+            }
+            case 2:
+            {
+                ShowNumber(8);
+                digitalLamps[5].GetComponent<Renderer>().material = matUnlit;
+                digitalLamps[4].GetComponent<Renderer>().material = matUnlit;
+                break;
+            }
+            case 3:
+            {
+                ShowNumber(8);
+                digitalLamps[5].GetComponent<Renderer>().material = matUnlit;
+                digitalLamps[6].GetComponent<Renderer>().material = matUnlit;
+                break;
+            }
+            case 4:
+            {
+                digitalLamps[1].GetComponent<Renderer>().material = matLit;
+                digitalLamps[3].GetComponent<Renderer>().material = matLit;
+                digitalLamps[4].GetComponent<Renderer>().material = matLit;
+                digitalLamps[5].GetComponent<Renderer>().material = matLit;
+                break;
+            }
+            case 5:
+            {
+                ShowNumber(8);
+                digitalLamps[3].GetComponent<Renderer>().material = matUnlit;
+                digitalLamps[6].GetComponent<Renderer>().material = matUnlit;
+                break;
+            }
+            case 6:
+            {
+                ShowNumber(8);
+                digitalLamps[3].GetComponent<Renderer>().material = matUnlit;
+                break;
+            }
+            case 7:
+            {
+                digitalLamps[0].GetComponent<Renderer>().material = matLit;
+                digitalLamps[3].GetComponent<Renderer>().material = matLit;
+                digitalLamps[4].GetComponent<Renderer>().material = matLit;
+                break;
+            }
+            case 8:
+            {
+                foreach (var item in digitalLamps)
+                {
+                    item.GetComponent<Renderer>().material = matLit;
+                }
+                break;
+            }
+            case 9:
+            {
+                ShowNumber(8);
+                digitalLamps[6].GetComponent<Renderer>().material = matUnlit;
                 break;
             }
         }

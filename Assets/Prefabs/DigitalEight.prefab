@@ -277,6 +277,7 @@ MonoBehaviour:
   - {fileID: 4999071647515534755}
   matUnlit: {fileID: 2100000, guid: dcdf737d89bd75240831270a67fd1608, type: 2}
   matLit: {fileID: 2100000, guid: e3286c8896a2d9643bc22fac9ef0f6f8, type: 2}
+  num: 6
 --- !u!1 &4828680662066779978
 GameObject:
   m_ObjectHideFlags: 0
