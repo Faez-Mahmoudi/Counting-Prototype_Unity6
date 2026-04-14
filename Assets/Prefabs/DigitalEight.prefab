@@ -225,6 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136679252084993081}
+  - component: {fileID: 6850305687037778986}
   m_Layer: 0
   m_Name: DigitalEight
   m_TagString: Untagged
@@ -254,6 +255,28 @@ Transform:
   - {fileID: 6131774116485947680}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6850305687037778986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794603817624242110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0efdee3083493499b5fb1fb2b11a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  digitalLamps:
+  - {fileID: 8899825335871667012}
+  - {fileID: 6582964486324860426}
+  - {fileID: 4828680662066779978}
+  - {fileID: 3192686043599864704}
+  - {fileID: 7419798250982577681}
+  - {fileID: 3237708161830159954}
+  - {fileID: 4999071647515534755}
+  matUnlit: {fileID: 2100000, guid: dcdf737d89bd75240831270a67fd1608, type: 2}
+  matLit: {fileID: 2100000, guid: e3286c8896a2d9643bc22fac9ef0f6f8, type: 2}
 --- !u!1 &4828680662066779978
 GameObject:
   m_ObjectHideFlags: 0
