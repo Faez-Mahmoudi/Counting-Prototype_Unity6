@@ -8,6 +8,14 @@ public class CountDownClock : MonoBehaviour
     private DigitalNumber dgSecond1;
     private DigitalNumber dgSecond2;
     private DigitalNumber dgMinutes;
+
+    private float startDelay = 1;
+    private float repeatRate = 1;
+
+    [SerializeField] private int m_Sec1;
+    [SerializeField] private int m_Sec2;
+    [SerializeField] private int m_Min;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,14 +23,36 @@ public class CountDownClock : MonoBehaviour
         dgSecond2 = secondTwo.GetComponent<DigitalNumber>();
         dgMinutes = minutes.GetComponent<DigitalNumber>();
 
-        ClockToShow(3, 0, 0);
+        m_Min = 3;
+        m_Sec2 = 0;
+        m_Sec1 = 0;
 
+        ClockToShow(m_Min, m_Sec2, m_Sec1);
+        /*
+        m_Min = 2;
+        m_Sec2 = 5;
+        m_Sec1 = 10;
+        */
+        InvokeRepeating("CowntDown", startDelay, repeatRate);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CowntDown()
     {
-        
+        if (m_Sec2 == 0 && m_Sec1 == 0)
+        {
+            m_Min--;
+            m_Sec2 = 5;
+            m_Sec1 = 9;
+        }
+        else if (m_Sec1 == 0)
+        {
+            m_Sec1 = 9;
+            m_Sec2--;
+        }
+        else
+            m_Sec1--;
+                        
+        ClockToShow(m_Min, m_Sec2, m_Sec1);
     }
 
     private void ClockToShow(int min, int sec2, int sec1)
