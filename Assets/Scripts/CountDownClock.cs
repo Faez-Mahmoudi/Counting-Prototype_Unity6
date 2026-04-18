@@ -28,28 +28,23 @@ public class CountDownClock : MonoBehaviour
         m_Sec1 = 0;
 
         ClockToShow(m_Min, m_Sec2, m_Sec1);
-        /*
-        m_Min = 2;
-        m_Sec2 = 5;
-        m_Sec1 = 10;
-        */
         InvokeRepeating("CowntDown", startDelay, repeatRate);
     }
 
     private void CowntDown()
     {
-        if (m_Sec2 == 0 && m_Sec1 == 0)
+        if (m_Sec2 == 0 && m_Sec1 == 0 && m_Min != 0)
         {
             m_Min--;
             m_Sec2 = 5;
             m_Sec1 = 9;
         }
-        else if (m_Sec1 == 0)
+        else if (m_Sec1 == 0 && m_Sec2 != 0)
         {
             m_Sec1 = 9;
             m_Sec2--;
         }
-        else
+        else if (m_Sec1 != 0)
             m_Sec1--;
                         
         ClockToShow(m_Min, m_Sec2, m_Sec1);
