@@ -8,9 +8,6 @@ public class GoalCounter : MonoBehaviour
     private DigitalNumber dgNumber;
     //[SerializeField] private int ID = 0;
 
-    // UI
-    [SerializeField] private TextMeshProUGUI pointText;
-
 
     private void Start()
     {
@@ -24,7 +21,6 @@ public class GoalCounter : MonoBehaviour
         if(other.gameObject.CompareTag("Ball"))
         {
             Count += 1;
-            pointText.text = "Points: " + Count;
             dgNumber.ShowNumber(Count);
         }
     }
