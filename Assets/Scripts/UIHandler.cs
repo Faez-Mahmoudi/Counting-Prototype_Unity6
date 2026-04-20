@@ -39,6 +39,12 @@ public class UIHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             ChangePause();
     }
+
+    public void StartGame()
+    {
+        gameStartPanel.gameObject.SetActive(false);        
+        Time.timeScale = 1;
+    }
     
     public void ChangePause()
     {
