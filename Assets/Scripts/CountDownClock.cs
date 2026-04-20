@@ -12,8 +12,8 @@ public class CountDownClock : MonoBehaviour
     private float startDelay = 1;
     private float repeatRate = 1;
 
-    [SerializeField] private int m_Sec1;
-    [SerializeField] private int m_Sec2;
+    [SerializeField] private int m_Sec1 = 0;
+    [SerializeField] private int m_Sec2 = 0;
     [SerializeField] private int m_Min;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,11 +24,15 @@ public class CountDownClock : MonoBehaviour
         dgMinutes = minutes.GetComponent<DigitalNumber>();
 
         m_Min = 3;
-        m_Sec2 = 0;
-        m_Sec1 = 0;
 
         ClockToShow(m_Min, m_Sec2, m_Sec1);
         InvokeRepeating("CowntDown", startDelay, repeatRate);
+    }
+
+    public void StartTime(int m)
+    {
+        m_Min = m;
+        ClockToShow(m_Min, m_Sec2, m_Sec1);
     }
 
     private void CowntDown()
