@@ -9,7 +9,8 @@ using UnityEditor;
 public class UIHandler : MonoBehaviour
 {
     [Header("Panel")]
-    [SerializeField] private GameObject gameStartPanel;
+    [SerializeField] private GameObject gameStartPanelLeft;
+    [SerializeField] private GameObject gameStartPanelRight;
 
     private bool paused;
 
@@ -30,7 +31,8 @@ public class UIHandler : MonoBehaviour
         //MainManager.Instance.LoadScore();
         //MainManager.Instance.isGameActive = true;
 
-        gameStartPanel.gameObject.SetActive(true);        
+        gameStartPanelLeft.gameObject.SetActive(true);        
+        gameStartPanelRight.gameObject.SetActive(true);        
     }
 
     // Update is called once per frame
@@ -42,7 +44,8 @@ public class UIHandler : MonoBehaviour
 
     public void StartGame()
     {
-        gameStartPanel.gameObject.SetActive(false);        
+        gameStartPanelLeft.gameObject.SetActive(false);        
+        gameStartPanelRight.gameObject.SetActive(false);        
         Time.timeScale = 1;
     }
     
@@ -68,7 +71,8 @@ public class UIHandler : MonoBehaviour
     public void GameIsOver()
     {
         //MainManager.Instance.SaveScore();
-        gameStartPanel.gameObject.SetActive(true);
+        gameStartPanelLeft.gameObject.SetActive(true);
+        gameStartPanelRight.gameObject.SetActive(true);
         //MainManager.Instance.isGameActive = false;
 
         /*
