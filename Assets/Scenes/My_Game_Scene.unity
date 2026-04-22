@@ -2743,6 +2743,7 @@ GameObject:
   - component: {fileID: 549509210}
   - component: {fileID: 549509209}
   - component: {fileID: 549509208}
+  - component: {fileID: 549509211}
   m_Layer: 5
   m_Name: SevenGoalsButton
   m_TagString: Untagged
@@ -2852,6 +2853,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549509206}
   m_CullTransparentMesh: 1
+--- !u!114 &549509211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549509206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6b0fa758343cc41a9caad6de5faa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals: 7
 --- !u!1 &552615036 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7308879587419532901, guid: cd3f04758a943204f91e0c017f295e3b, type: 3}
@@ -6182,6 +6196,7 @@ GameObject:
   - component: {fileID: 1018894748}
   - component: {fileID: 1018894747}
   - component: {fileID: 1018894746}
+  - component: {fileID: 1018894749}
   m_Layer: 5
   m_Name: FiveGoalsButton
   m_TagString: Untagged
@@ -6291,6 +6306,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018894744}
   m_CullTransparentMesh: 1
+--- !u!114 &1018894749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018894744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6b0fa758343cc41a9caad6de5faa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals: 5
 --- !u!1 &1020292729
 GameObject:
   m_ObjectHideFlags: 0
@@ -7943,6 +7971,7 @@ GameObject:
   - component: {fileID: 1330901149}
   - component: {fileID: 1330901148}
   - component: {fileID: 1330901147}
+  - component: {fileID: 1330901150}
   m_Layer: 5
   m_Name: NineGoalsButton
   m_TagString: Untagged
@@ -8052,6 +8081,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330901145}
   m_CullTransparentMesh: 1
+--- !u!114 &1330901150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330901145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6b0fa758343cc41a9caad6de5faa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals: 9
 --- !u!1 &1339415317
 GameObject:
   m_ObjectHideFlags: 0
