@@ -3842,6 +3842,10 @@ PrefabInstance:
       value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 5931797569180888762, guid: 10c7d81f54fdc0149afaedd512403e30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931797569180888762, guid: 10c7d81f54fdc0149afaedd512403e30, type: 3}
       propertyPath: powerStrength
       value: 3
       objectReference: {fileID: 0}
@@ -3911,6 +3915,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8075087563135203525, guid: 10c7d81f54fdc0149afaedd512403e30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1606078458}
+    - targetCorrespondingSourceObject: {fileID: 8075087563135203525, guid: 10c7d81f54fdc0149afaedd512403e30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1606078460}
   m_SourcePrefab: {fileID: 100100000, guid: 10c7d81f54fdc0149afaedd512403e30, type: 3}
 --- !u!1 &697209779
 GameObject:
@@ -9126,6 +9133,20 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1606078460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606078451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1b2ff03dadb3d468b01ea6209de34b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  powerStrength: 3
 --- !u!1 &1613224251
 GameObject:
   m_ObjectHideFlags: 0
