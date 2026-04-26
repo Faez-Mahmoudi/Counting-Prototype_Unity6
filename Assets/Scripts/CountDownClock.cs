@@ -37,21 +37,26 @@ public class CountDownClock : MonoBehaviour
 
     private void CowntDown()
     {
-        if (m_Sec2 == 0 && m_Sec1 == 0 && m_Min != 0)
+        if (MainManager.Instance.isGameActive)
         {
-            m_Min--;
-            m_Sec2 = 5;
-            m_Sec1 = 9;
-        }
-        else if (m_Sec1 == 0 && m_Sec2 != 0)
-        {
-            m_Sec1 = 9;
-            m_Sec2--;
-        }
-        else if (m_Sec1 != 0)
-            m_Sec1--;
+            if (m_Sec1 == 0 && m_Sec2 == 0 && m_Min == 0)
+                MainManager.Instance.isGameActive = false;
+            else if (m_Sec1 == 0 && m_Sec2 == 0 && m_Min != 0)
+            {
+                m_Min--;
+                m_Sec2 = 5;
+                m_Sec1 = 9;
+            }
+            else if (m_Sec1 == 0 && m_Sec2 != 0)
+            {
+                m_Sec1 = 9;
+                m_Sec2--;
+            }
+            else if (m_Sec1 != 0)
+                m_Sec1--;
                         
-        ClockToShow(m_Min, m_Sec2, m_Sec1);
+            ClockToShow(m_Min, m_Sec2, m_Sec1);
+        }
     }
 
     private void ClockToShow(int min, int sec2, int sec1)

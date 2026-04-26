@@ -40,6 +40,9 @@ public class UIHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             ChangePause();
+
+        if (!MainManager.Instance.isGameActive)
+            GameIsOver();
     }
 
     public void StartGame()
@@ -74,6 +77,7 @@ public class UIHandler : MonoBehaviour
         //MainManager.Instance.SaveScore();
         gameStartPanelLeft.gameObject.SetActive(true);
         gameStartPanelRight.gameObject.SetActive(true);
+        Time.timeScale = 0;
         //MainManager.Instance.isGameActive = false;
 
         /*
