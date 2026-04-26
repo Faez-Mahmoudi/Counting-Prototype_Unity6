@@ -44,6 +44,7 @@ public class UIHandler : MonoBehaviour
 
     public void StartGame()
     {
+        MainManager.Instance.isGameActive = true;
         gameStartPanelLeft.gameObject.SetActive(false);        
         gameStartPanelRight.gameObject.SetActive(false);        
         Time.timeScale = 1;
@@ -51,7 +52,7 @@ public class UIHandler : MonoBehaviour
     
     public void ChangePause()
     {
-        if (true)//MainManager.Instance.isGameActive)
+        if (MainManager.Instance.isGameActive)
         {
             if(!paused)
             {

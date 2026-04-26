@@ -7,8 +7,6 @@ public class GoalCounter : MonoBehaviour
     [SerializeField] private int goalLimit;
     [SerializeField] private GameObject digitalScoreBoard;
     private DigitalNumber dgNumber;
-    //[SerializeField] private int ID = 0;
-
 
     private void Start()
     {
@@ -20,10 +18,12 @@ public class GoalCounter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Ball"))
+        if(other.gameObject.CompareTag("Ball") && MainManager.Instance.isGameActive)
         {
             Count += 1;
             dgNumber.ShowNumber(Count);
+            if (Count >= goalLimit)
+                MainManager.Instance.isGameActive = false;
         }
     }
 

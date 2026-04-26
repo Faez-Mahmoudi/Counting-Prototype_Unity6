@@ -16,15 +16,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float verticalInput = Input.GetAxis("Vertical" + ID);
-        float horizontalInput = Input.GetAxis("Horizontal" + ID);
+        if (MainManager.Instance.isGameActive)
+        {
+            float verticalInput = Input.GetAxis("Vertical" + ID);
+            float horizontalInput = Input.GetAxis("Horizontal" + ID);
 
-        playerRb.AddForce(Vector3.up * Time.deltaTime * speed * verticalInput);
-        playerRb.AddForce(Vector3.forward * Time.deltaTime * speed * horizontalInput);
+            playerRb.AddForce(Vector3.up * Time.deltaTime * speed * verticalInput);
+            playerRb.AddForce(Vector3.forward * Time.deltaTime * speed * horizontalInput);
 
-        transform.rotation = Quaternion.identity;
-        if (transform.position.x != 0)
-            Debug.Log("Somthing went wrong");
+            transform.rotation = Quaternion.identity;
+            if (transform.position.x != 0)
+                Debug.Log("Somthing went wrong");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

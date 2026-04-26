@@ -27,7 +27,7 @@ public class MainManager : MonoBehaviour
        Instance = this;
        DontDestroyOnLoad(gameObject);
        my_audio = GetComponent<AudioSource>(); 
-       isGameActive = true;
+       isGameActive = false;
        LoadScore();
        my_audio.volume = musicVolume;
     }

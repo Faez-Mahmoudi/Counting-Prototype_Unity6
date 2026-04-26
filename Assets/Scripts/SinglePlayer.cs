@@ -17,12 +17,15 @@ public class SinglePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 lookDirection = (ball.transform.position - transform.position).normalized;
-        playerRb.AddForce(lookDirection * speed * Time.timeScale);
+        if (MainManager.Instance.isGameActive)
+        {
+            Vector3 lookDirection = (ball.transform.position - transform.position).normalized;
+            playerRb.AddForce(lookDirection * speed * Time.timeScale);
 
-        transform.rotation = Quaternion.identity;
-        if (transform.position.x != 0)
-            Debug.Log("Somthing went wrong");
+            transform.rotation = Quaternion.identity;
+            if (transform.position.x != 0)
+                Debug.Log("Somthing went wrong");
+        } 
     }
 
     private void OnCollisionEnter(Collision collision)
