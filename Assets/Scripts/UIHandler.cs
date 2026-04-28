@@ -9,8 +9,8 @@ using UnityEditor;
 public class UIHandler : MonoBehaviour
 {
     [Header("Panel")]
-    [SerializeField] private GameObject gameStartPanelLeft;
-    [SerializeField] private GameObject gameStartPanelRight;
+    [SerializeField] private GameObject gameStartPanel;
+    [SerializeField] private GameObject gamePausePanel;
 
     private bool paused;
 
@@ -31,8 +31,8 @@ public class UIHandler : MonoBehaviour
         //MainManager.Instance.LoadScore();
         //MainManager.Instance.isGameActive = true;
 
-        gameStartPanelLeft.gameObject.SetActive(true);        
-        gameStartPanelRight.gameObject.SetActive(true);        
+        gameStartPanel.gameObject.SetActive(true);        
+        gamePausePanel.gameObject.SetActive(false);        
     }
 
     // Update is called once per frame
@@ -48,8 +48,7 @@ public class UIHandler : MonoBehaviour
     public void StartGame()
     {
         MainManager.Instance.isGameActive = true;
-        gameStartPanelLeft.gameObject.SetActive(false);        
-        gameStartPanelRight.gameObject.SetActive(false);        
+        gameStartPanel.gameObject.SetActive(false);        
         Time.timeScale = 1;
     }
     
@@ -60,13 +59,13 @@ public class UIHandler : MonoBehaviour
             if(!paused)
             {
                 paused = true;
-                //pausePanel.gameObject.SetActive(true);
+                gamePausePanel.gameObject.SetActive(true);
                 Time.timeScale = 0;
             }
             else
             {
                 paused = false;
-                //pausePanel.gameObject.SetActive(false);
+                gamePausePanel.gameObject.SetActive(false);
                 Time.timeScale = 1;
             }
         }
@@ -75,8 +74,8 @@ public class UIHandler : MonoBehaviour
     public void GameIsOver()
     {
         //MainManager.Instance.SaveScore();
-        gameStartPanelLeft.gameObject.SetActive(true);
-        gameStartPanelRight.gameObject.SetActive(true);
+        gameStartPanel.gameObject.SetActive(true);
+        gamePausePanel.gameObject.SetActive(false);
         Time.timeScale = 0;
         //MainManager.Instance.isGameActive = false;
 
