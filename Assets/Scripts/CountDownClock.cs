@@ -23,7 +23,7 @@ public class CountDownClock : MonoBehaviour
         dgSecond2 = secondTwo.GetComponent<DigitalNumber>();
         dgMinutes = minutes.GetComponent<DigitalNumber>();
 
-        m_Min = 3;
+        m_Min = MainManager.Instance.orgMinutes;
 
         ClockToShow(m_Min, m_Sec2, m_Sec1);
         InvokeRepeating("CowntDown", startDelay, repeatRate);
@@ -32,7 +32,10 @@ public class CountDownClock : MonoBehaviour
     public void StartTime(int m)
     {
         m_Min = m;
+        m_Sec1 = 0;
+        m_Sec2 = 0;
         ClockToShow(m_Min, m_Sec2, m_Sec1);
+        MainManager.Instance.orgMinutes = m_Min;
     }
 
     private void CowntDown()
