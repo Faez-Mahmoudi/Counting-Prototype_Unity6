@@ -3,7 +3,7 @@ using TMPro;
 
 public class GoalCounter : MonoBehaviour
 {
-    [SerializeField] private int Count = 0;
+    [SerializeField] private int Count;
     [SerializeField] private int goalLimit;
     [SerializeField] private GameObject digitalScoreBoard;
     private DigitalNumber dgNumber;
@@ -11,9 +11,19 @@ public class GoalCounter : MonoBehaviour
     private void Start()
     {
         Count = 0;
-        goalLimit = 7;
+        goalLimit = MainManager.Instance.orgGoals;
         dgNumber = digitalScoreBoard.GetComponent<DigitalNumber>();
         dgNumber.ShowNumber(0);
+    }
+
+    private void Update()
+    {
+        if(!MainManager.Instance.isGameActive)
+        {
+            dgNumber.ShowNumber(0);
+            Count = 0;
+        }
+            
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,5 +40,8 @@ public class GoalCounter : MonoBehaviour
     public void GoalLimit(int lim)
     {
         goalLimit = lim;
+        Count = 0;
+        dgNumber.ShowNumber(0);
+        MainManager.Instance.orgGoals = goalLimit;
     }
 }
