@@ -5,6 +5,8 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance{get; private set;}
     public float musicVolume;
+    public int orgGoals;
+    public int orgMinutes;
     public bool isGameActive;
 
     public AudioSource my_audio;
@@ -14,6 +16,8 @@ public class MainManager : MonoBehaviour
     class SaveData
     {
         public float m_volume;
+        public int org_goals;
+        public int org_Min;
     }
 
     void Awake()
@@ -36,6 +40,8 @@ public class MainManager : MonoBehaviour
     {
         SaveData data = new SaveData();
         data.m_volume = musicVolume;
+        data.org_goals = orgGoals;
+        data.org_Min = orgMinutes;
 
         string json  = JsonUtility.ToJson(data);
         File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
@@ -51,10 +57,14 @@ public class MainManager : MonoBehaviour
             SaveData data = JsonUtility.FromJson<SaveData>(json);
 
             musicVolume = data.m_volume;
+            orgGoals = data.org_goals;
+            orgMinutes = data.org_Min;
         }
         else
         {
             musicVolume = 1.0f;
+            orgGoals = 7;
+            orgMinutes = 3;
         }
     }
 }

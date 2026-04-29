@@ -75,7 +75,7 @@ public class UIHandler : MonoBehaviour
     {
         //MainManager.Instance.SaveScore();
         gameStartPanel.gameObject.SetActive(true);
-        gamePausePanel.gameObject.SetActive(false);
+        //gamePausePanel.gameObject.SetActive(false);
         Time.timeScale = 0;
         //MainManager.Instance.isGameActive = false;
 
