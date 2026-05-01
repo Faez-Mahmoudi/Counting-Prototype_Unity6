@@ -14,15 +14,6 @@ public class UIHandler : MonoBehaviour
 
     private bool paused;
 
-    /*
-    [Header("UI")]
-    [SerializeField] private TextMeshProUGUI waveText;
-    [SerializeField] public TextMeshProUGUI bestWaveText; // we will access it on SpawnManager.cs
-    [SerializeField] private TextMeshProUGUI pointText;
-    [SerializeField] private TextMeshProUGUI bestPointText;
-    [SerializeField] private TextMeshProUGUI powerupText;
-    */
-
     void Start()
     {
         paused = false;

@@ -22,8 +22,7 @@ public class GoalCounter : MonoBehaviour
         {
             dgNumber.ShowNumber(0);
             Count = 0;
-        }
-            
+        }     
     }
 
     private void OnTriggerEnter(Collider other)

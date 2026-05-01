@@ -29,6 +29,14 @@ public class CountDownClock : MonoBehaviour
         InvokeRepeating("CowntDown", startDelay, repeatRate);
     }
 
+    private void Update()
+    {
+        if(!MainManager.Instance.isGameActive)
+        {
+            StartTime(MainManager.Instance.orgMinutes);
+        }     
+    }
+
     public void StartTime(int m)
     {
         m_Min = m;
