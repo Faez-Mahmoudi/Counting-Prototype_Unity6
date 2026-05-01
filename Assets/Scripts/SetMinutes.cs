@@ -16,8 +16,17 @@ public class SetMinutes : MonoBehaviour
        button.onClick.AddListener(SetTime); 
     }
 
+    void Update()
+    {
+        if (MainManager.Instance.orgMinutes == minutes)
+            button.enabled = false;
+        else
+            button.enabled = true;
+    }
+
     void SetTime()
     {
         clock.StartTime(minutes);
+        //button.enabled = false;
     }
 }
