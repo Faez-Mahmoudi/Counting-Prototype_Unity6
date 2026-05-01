@@ -13,6 +13,14 @@ public class SetGoals : MonoBehaviour
        button.onClick.AddListener(SetGoalLimit); 
     }
 
+    void Update()
+    {
+        if (MainManager.Instance.orgGoals == goals)
+            button.enabled = false;
+        else
+            button.enabled = true;
+    }
+
     void SetGoalLimit()
     {
         foreach (var g in FindObjectsByType<GoalCounter>(FindObjectsSortMode.None))

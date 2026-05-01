@@ -27,6 +27,5 @@ public class SetMinutes : MonoBehaviour
     void SetTime()
     {
         clock.StartTime(minutes);
-        //button.enabled = false;
     }
 }
