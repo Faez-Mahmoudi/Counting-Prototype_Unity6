@@ -8,10 +8,13 @@ public class GoalCounter : MonoBehaviour
     [SerializeField] private GameObject digitalScoreBoard;
     private DigitalNumber dgNumber;
 
+    private UIHandler uiHandler;
+
     private void Start()
     {
         Count = 0;
         goalLimit = MainManager.Instance.orgGoals;
+        uiHandler = GameObject.Find("CanvasWorldSpace").GetComponent<UIHandler>();
         dgNumber = digitalScoreBoard.GetComponent<DigitalNumber>();
         dgNumber.ShowNumber(0);
     }
@@ -32,7 +35,8 @@ public class GoalCounter : MonoBehaviour
             Count += 1;
             dgNumber.ShowNumber(Count);
             if (Count >= goalLimit)
-                MainManager.Instance.isGameActive = false;
+                uiHandler.GameIsOver();
+                //MainManager.Instance.isGameActive = false;
         }
     }
 

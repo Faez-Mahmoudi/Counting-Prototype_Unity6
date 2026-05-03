@@ -11,6 +11,7 @@ public class UIHandler : MonoBehaviour
     [Header("Panel")]
     [SerializeField] private GameObject gameStartPanel;
     [SerializeField] private GameObject gamePausePanel;
+    [SerializeField] private GameObject gameOverPanel;
 
     private bool paused;
 
@@ -19,11 +20,11 @@ public class UIHandler : MonoBehaviour
         paused = false;
         Time.timeScale = 0;
 
-        //MainManager.Instance.LoadScore();
-        //MainManager.Instance.isGameActive = true;
+        MainManager.Instance.LoadScore();
 
         gameStartPanel.gameObject.SetActive(true);        
         gamePausePanel.gameObject.SetActive(false);        
+        gameOverPanel.gameObject.SetActive(false);        
     }
 
     // Update is called once per frame
@@ -31,9 +32,10 @@ public class UIHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             ChangePause();
-
+        /*
         if (!MainManager.Instance.isGameActive)
             GameIsOver();
+            */
     }
 
     public void StartGame()
@@ -41,6 +43,7 @@ public class UIHandler : MonoBehaviour
         MainManager.Instance.isGameActive = true;
         gameStartPanel.gameObject.SetActive(false);        
         Time.timeScale = 1;
+        MainManager.Instance.SaveScore();
     }
     
     public void ChangePause()
@@ -65,18 +68,8 @@ public class UIHandler : MonoBehaviour
     public void GameIsOver()
     {
         //MainManager.Instance.SaveScore();
-        gameStartPanel.gameObject.SetActive(true);
-        //gamePausePanel.gameObject.SetActive(false);
+        gameOverPanel.gameObject.SetActive(true);
         Time.timeScale = 0;
-        //MainManager.Instance.isGameActive = false;
-
-        /*
-        if (point > MainManager.Instance.bestPoint)
-        {
-            MainManager.Instance.bestPoint = point;
-            bestPointText.SetText("Best Point: " + MainManager.Instance.bestPoint);
-        }
-        */
     }
 
     public void Restart()
@@ -86,7 +79,7 @@ public class UIHandler : MonoBehaviour
 
     public void Exit()
     {
-        //MainManager.Instance.SaveScore();
+        MainManager.Instance.SaveScore();
 
         # if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
