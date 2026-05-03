@@ -5,6 +5,7 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance{get; private set;}
     public float musicVolume;
+    public int numberOfPlayer;
     public int orgGoals;
     public int orgMinutes;
     public bool isGameActive;
@@ -15,6 +16,7 @@ public class MainManager : MonoBehaviour
     [System.Serializable]
     class SaveData
     {
+        public int n_player;
         public float m_volume;
         public int org_goals;
         public int org_Min;
@@ -39,6 +41,7 @@ public class MainManager : MonoBehaviour
     public void SaveScore()
     {
         SaveData data = new SaveData();
+        data.n_player = numberOfPlayer;
         data.m_volume = musicVolume;
         data.org_goals = orgGoals;
         data.org_Min = orgMinutes;
@@ -56,12 +59,14 @@ public class MainManager : MonoBehaviour
             string json = File.ReadAllText(path);
             SaveData data = JsonUtility.FromJson<SaveData>(json);
 
+            numberOfPlayer = data.n_player;
             musicVolume = data.m_volume;
             orgGoals = data.org_goals;
             orgMinutes = data.org_Min;
         }
         else
         {
+            numberOfPlayer = 1;
             musicVolume = 1.0f;
             orgGoals = 7;
             orgMinutes = 3;
