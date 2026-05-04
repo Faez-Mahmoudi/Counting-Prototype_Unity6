@@ -35,8 +35,10 @@ public class GoalCounter : MonoBehaviour
             Count += 1;
             dgNumber.ShowNumber(Count);
             if (Count >= goalLimit)
+            {
                 uiHandler.GameIsOver();
-                //MainManager.Instance.isGameActive = false;
+                MainManager.Instance.isGameActive = false;
+            }
         }
     }
 

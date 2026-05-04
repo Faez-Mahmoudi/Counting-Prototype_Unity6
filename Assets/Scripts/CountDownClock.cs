@@ -57,8 +57,10 @@ public class CountDownClock : MonoBehaviour
         if (MainManager.Instance.isGameActive)
         {
             if (m_Sec1 == 0 && m_Sec2 == 0 && m_Min == 0)
+            {
                 uiHandler.GameIsOver();
-                //MainManager.Instance.isGameActive = false;
+                MainManager.Instance.isGameActive = false;
+            }     
             else if (m_Sec1 == 0 && m_Sec2 == 0 && m_Min != 0)
             {
                 m_Min--;

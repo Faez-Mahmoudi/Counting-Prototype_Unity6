@@ -74,6 +74,7 @@ public class UIHandler : MonoBehaviour
 
     public void Restart()
     {
+        MainManager.Instance.isGameActive = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
