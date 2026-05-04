@@ -6,7 +6,6 @@ public class ChangeOneTwoPlayer : MonoBehaviour
     private Button button;
     private SinglePlayer onePlayer;
     private PlayerController twoPlayer;
-    [SerializeField] private bool isSinglePlay;
     [SerializeField] private int ID;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,12 +23,21 @@ public class ChangeOneTwoPlayer : MonoBehaviour
             button.enabled = false;
         else
             button.enabled = true;
+
+        if (MainManager.Instance.numberOfPlayer == 1)
+        {
+            onePlayer.enabled = true;
+            twoPlayer.enabled = false; 
+        }
+        else if (MainManager.Instance.numberOfPlayer == 2)
+        {
+            onePlayer.enabled = false;
+            twoPlayer.enabled = true;
+        }
     }
 
     void SetEnabel()
     {
         MainManager.Instance.numberOfPlayer = ID;
-        onePlayer.enabled = isSinglePlay;
-        twoPlayer.enabled = !isSinglePlay;
     }
 }
