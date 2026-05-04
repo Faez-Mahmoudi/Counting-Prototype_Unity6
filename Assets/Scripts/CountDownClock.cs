@@ -15,6 +15,9 @@ public class CountDownClock : MonoBehaviour
     [SerializeField] private int m_Sec1 = 0;
     [SerializeField] private int m_Sec2 = 0;
     [SerializeField] private int m_Min;
+
+    private UIHandler uiHandler;
+
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +25,9 @@ public class CountDownClock : MonoBehaviour
         dgSecond1 = secondOne.GetComponent<DigitalNumber>();
         dgSecond2 = secondTwo.GetComponent<DigitalNumber>();
         dgMinutes = minutes.GetComponent<DigitalNumber>();
+
+        uiHandler = GameObject.Find("CanvasWorldSpace").GetComponent<UIHandler>();
+
 
         m_Min = MainManager.Instance.orgMinutes;
 
@@ -51,7 +57,8 @@ public class CountDownClock : MonoBehaviour
         if (MainManager.Instance.isGameActive)
         {
             if (m_Sec1 == 0 && m_Sec2 == 0 && m_Min == 0)
-                MainManager.Instance.isGameActive = false;
+                uiHandler.GameIsOver();
+                //MainManager.Instance.isGameActive = false;
             else if (m_Sec1 == 0 && m_Sec2 == 0 && m_Min != 0)
             {
                 m_Min--;
