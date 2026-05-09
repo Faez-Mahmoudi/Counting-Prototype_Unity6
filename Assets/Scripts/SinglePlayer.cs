@@ -7,10 +7,15 @@ public class SinglePlayer : MonoBehaviour
     private Rigidbody playerRb;
     private GameObject ball;
 
+    private AudioSource playerAudio;
+    [SerializeField] AudioClip hitBallSound;
+    [SerializeField] AudioClip hitPlayerSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
+        playerAudio = GetComponent<AudioSource>();
         ball = GameObject.Find("Ball");
     }
 
@@ -32,12 +37,14 @@ public class SinglePlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
+            playerAudio.PlayOneShot(hitBallSound, 1.0f);
             Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
             ballRb.AddForce(awayFromPlayer * powerStrength, ForceMode.Impulse);
         }
         if (collision.gameObject.CompareTag("Player"))
         {
+            playerAudio.PlayOneShot(hitPlayerSound, 1.0f);
             Rigidbody rivalRb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
             rivalRb.AddForce(awayFromPlayer * powerStrength, ForceMode.Impulse);

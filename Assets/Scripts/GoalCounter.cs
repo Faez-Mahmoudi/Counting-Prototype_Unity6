@@ -37,7 +37,7 @@ public class GoalCounter : MonoBehaviour
         {
             Count += 1;
             dgNumber.ShowNumber(Count);
-            netAudio.PlayOneShot(cheerSound, 1.0f);
+            netAudio.PlayOneShot(cheerSound, 0.7f);
             if (Count >= goalLimit)
             {
                 uiHandler.GameIsOver();
