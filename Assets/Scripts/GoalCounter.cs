@@ -9,6 +9,8 @@ public class GoalCounter : MonoBehaviour
     private DigitalNumber dgNumber;
 
     private UIHandler uiHandler;
+    private AudioSource netAudio;
+    [SerializeField] private AudioClip cheerSound;
 
     private void Start()
     {
@@ -16,6 +18,7 @@ public class GoalCounter : MonoBehaviour
         goalLimit = MainManager.Instance.orgGoals;
         uiHandler = GameObject.Find("CanvasWorldSpace").GetComponent<UIHandler>();
         dgNumber = digitalScoreBoard.GetComponent<DigitalNumber>();
+        netAudio = GetComponent<AudioSource>();
         dgNumber.ShowNumber(0);
     }
 
@@ -34,6 +37,7 @@ public class GoalCounter : MonoBehaviour
         {
             Count += 1;
             dgNumber.ShowNumber(Count);
+            netAudio.PlayOneShot(cheerSound, 1.0f);
             if (Count >= goalLimit)
             {
                 uiHandler.GameIsOver();
