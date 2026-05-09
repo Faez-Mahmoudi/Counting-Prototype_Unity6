@@ -39,14 +39,13 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
-            playerAudio.PlayOneShot(hitBallSound, 1.0f);
             Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
             ballRb.AddForce(awayFromPlayer * powerStrength, ForceMode.Impulse);
+            playerAudio.PlayOneShot(hitBallSound, 1.0f);
         }
         if (collision.gameObject.CompareTag("Player"))
         {
-            playerAudio.PlayOneShot(hitPlayerSound, 1.0f);
             Rigidbody rivalRb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
             rivalRb.AddForce(awayFromPlayer * powerStrength, ForceMode.Impulse);
