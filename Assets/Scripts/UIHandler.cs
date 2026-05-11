@@ -6,6 +6,8 @@ using TMPro;
 using UnityEditor;
 # endif
 
+[RequireComponent(typeof(AudioSource))]
+
 public class UIHandler : MonoBehaviour
 {
     [Header("Panel")]
@@ -14,6 +16,9 @@ public class UIHandler : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
 
     private bool paused;
+
+    private AudioSource buttonAudio;
+    [SerializeField] AudioClip clickSound;
 
     void Start()
     {
@@ -24,7 +29,10 @@ public class UIHandler : MonoBehaviour
 
         gameStartPanel.gameObject.SetActive(true);        
         gamePausePanel.gameObject.SetActive(false);        
-        gameOverPanel.gameObject.SetActive(false);        
+        gameOverPanel.gameObject.SetActive(false);
+
+        buttonAudio = GetComponent<AudioSource>();
+        buttonAudio.PlayOneShot(clickSound, 1.0f);
     }
 
     // Update is called once per frame
@@ -32,10 +40,6 @@ public class UIHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             ChangePause();
-        /*
-        if (!MainManager.Instance.isGameActive)
-            GameIsOver();
-            */
     }
 
     public void StartGame()
@@ -44,6 +48,7 @@ public class UIHandler : MonoBehaviour
         gameStartPanel.gameObject.SetActive(false);        
         Time.timeScale = 1;
         MainManager.Instance.SaveScore();
+        buttonAudio.PlayOneShot(clickSound, 1.0f);
     }
     
     public void ChangePause()
@@ -62,12 +67,12 @@ public class UIHandler : MonoBehaviour
                 gamePausePanel.gameObject.SetActive(false);
                 Time.timeScale = 1;
             }
+            buttonAudio.PlayOneShot(clickSound, 1.0f);
         }
     }
 
     public void GameIsOver()
     {
-        //MainManager.Instance.SaveScore();
         gameOverPanel.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
