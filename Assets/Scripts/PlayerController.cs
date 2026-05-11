@@ -37,19 +37,22 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ball"))
+        if ((MainManager.Instance.numberOfPlayer == 2) || (MainManager.Instance.numberOfPlayer == 1 && ID == "2"))
         {
-            Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
-            Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
-            ballRb.AddForce(awayFromPlayer * powerStrength, ForceMode.Impulse);
-            playerAudio.PlayOneShot(hitBallSound, 1.0f);
-        }
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Rigidbody rivalRb = collision.gameObject.GetComponent<Rigidbody>();
-            Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
-            rivalRb.AddForce(awayFromPlayer * powerStrength, ForceMode.Impulse);
-            playerAudio.PlayOneShot(hitPlayerSound, 1.0f);
+            if (collision.gameObject.CompareTag("Ball"))
+            {
+                Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
+                Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
+                ballRb.AddForce(awayFromPlayer * powerStrength, ForceMode.Impulse);
+                playerAudio.PlayOneShot(hitBallSound, 1.0f);
+            }
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                Rigidbody rivalRb = collision.gameObject.GetComponent<Rigidbody>();
+                Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
+                rivalRb.AddForce(awayFromPlayer * powerStrength, ForceMode.Impulse);
+                playerAudio.PlayOneShot(hitPlayerSound, 1.0f);
+            }
         }
     }
 }
