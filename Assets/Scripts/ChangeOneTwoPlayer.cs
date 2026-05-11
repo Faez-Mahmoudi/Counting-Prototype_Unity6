@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class ChangeOneTwoPlayer : MonoBehaviour
 {
     private Button button;
@@ -8,13 +10,17 @@ public class ChangeOneTwoPlayer : MonoBehaviour
     private PlayerController twoPlayer;
     [SerializeField] private int ID;
 
+    private AudioSource buttonAudio;
+    [SerializeField] AudioClip clickSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
        button = GetComponent<Button>();
        onePlayer = GameObject.Find("Player1").GetComponent<SinglePlayer>();
        twoPlayer = GameObject.Find("Player1").GetComponent<PlayerController>();
-       button.onClick.AddListener(SetEnabel); 
+       button.onClick.AddListener(SetEnabel);
+       buttonAudio = GetComponent<AudioSource>(); 
     }
 
     void Update()
@@ -39,5 +45,6 @@ public class ChangeOneTwoPlayer : MonoBehaviour
     void SetEnabel()
     {
         MainManager.Instance.numberOfPlayer = ID;
+        buttonAudio.PlayOneShot(clickSound, 1.0f);
     }
 }
