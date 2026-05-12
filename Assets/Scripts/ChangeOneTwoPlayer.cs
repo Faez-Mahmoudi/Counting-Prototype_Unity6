@@ -21,6 +21,8 @@ public class ChangeOneTwoPlayer : MonoBehaviour
        twoPlayer = GameObject.Find("Player1").GetComponent<PlayerController>();
        button.onClick.AddListener(SetEnabel);
        buttonAudio = GetComponent<AudioSource>(); 
+
+       
     }
 
     void Update()

@@ -67,7 +67,7 @@ public class MainManager : MonoBehaviour
         else
         {
             numberOfPlayer = 1;
-            musicVolume = 1.0f;
+            musicVolume = 0.5f;
             orgGoals = 7;
             orgMinutes = 3;
         }

@@ -1520,7 +1520,7 @@ PrefabInstance:
     - target: {fileID: 5192122028521382504, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: cheerSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7bde814091b6bfc4a97313839e215de8, type: 3}
+      objectReference: {fileID: 8300000, guid: 2fb6dc1f191deec48b5458cef5d6cb57, type: 3}
     - target: {fileID: 5192122028521382504, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: digitalScoreBoard
       value: 
@@ -9672,7 +9672,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: fed5b64424cdf954482a0020d408472e, type: 3}
   m_Resource: {fileID: 8300000, guid: fed5b64424cdf954482a0020d408472e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.786
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -13649,7 +13649,7 @@ PrefabInstance:
     - target: {fileID: 5192122028521382504, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: cheerSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7bde814091b6bfc4a97313839e215de8, type: 3}
+      objectReference: {fileID: 8300000, guid: 2fb6dc1f191deec48b5458cef5d6cb57, type: 3}
     - target: {fileID: 5192122028521382504, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: digitalScoreBoard
       value: 
