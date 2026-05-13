@@ -943,7 +943,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -3149,7 +3149,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -4144,7 +4144,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -4478,7 +4478,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -4672,7 +4672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1b2ff03dadb3d468b01ea6209de34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 7
   powerStrength: 3
   hitBallSound: {fileID: 8300000, guid: fc5ca27665748ac4d9f2248d2fbc8478, type: 3}
   hitPlayerSound: {fileID: 8300000, guid: 6edbb83c007e98b458c252d0df5fc77d, type: 3}
@@ -5112,8 +5112,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 697209780}
+  - component: {fileID: 697209781}
   m_Layer: 0
-  m_Name: BlueSpotLights
+  m_Name: RightSpotLights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5141,6 +5142,26 @@ Transform:
   - {fileID: 1550431213}
   m_Father: {fileID: 1577895860}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &697209781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697209779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f866c87dc7d79f44ab6edcedbebdc852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotLights:
+  - {fileID: 1659766522}
+  - {fileID: 1294199230}
+  - {fileID: 1852342874}
+  - {fileID: 2140121236}
+  - {fileID: 574727268}
+  - {fileID: 1792620071}
+  - {fileID: 1550431212}
 --- !u!1 &702240978
 GameObject:
   m_ObjectHideFlags: 0
@@ -10367,7 +10388,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -10837,7 +10858,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -11444,7 +11465,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -11767,6 +11788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOne: {fileID: 588684618}
   playerTwo: {fileID: 1606078451}
+  leftSpotLight: {fileID: 0}
+  rightSpotLight: {fileID: 0}
   playerMats:
   - {fileID: 2100000, guid: 5518a2cf5e709314885d5314819bc24f, type: 2}
   - {fileID: 2100000, guid: 3067291cf196572449ca5456f19d723c, type: 2}
@@ -12813,7 +12836,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -13228,8 +13251,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1613224252}
+  - component: {fileID: 1613224253}
   m_Layer: 0
-  m_Name: PinkSpotLights
+  m_Name: LeftSpotLights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13257,6 +13281,26 @@ Transform:
   - {fileID: 1249373496}
   m_Father: {fileID: 1577895860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613224253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613224251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f866c87dc7d79f44ab6edcedbebdc852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotLights:
+  - {fileID: 1799071462}
+  - {fileID: 1707741923}
+  - {fileID: 559620197}
+  - {fileID: 1412460929}
+  - {fileID: 167813115}
+  - {fileID: 407602142}
+  - {fileID: 1249373495}
 --- !u!1 &1641136466
 GameObject:
   m_ObjectHideFlags: 0
@@ -13885,7 +13929,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -14224,7 +14268,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -14915,7 +14959,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -15113,7 +15157,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -16461,7 +16505,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
@@ -17791,7 +17835,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3
