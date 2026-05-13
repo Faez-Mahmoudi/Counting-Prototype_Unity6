@@ -4605,7 +4605,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 0.54901963, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3529412, g: 1, b: 1, a: 1}
   m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
@@ -4645,7 +4645,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 4
@@ -4672,7 +4672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1b2ff03dadb3d468b01ea6209de34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 8
   powerStrength: 3
   hitBallSound: {fileID: 8300000, guid: fc5ca27665748ac4d9f2248d2fbc8478, type: 3}
   hitPlayerSound: {fileID: 8300000, guid: 6edbb83c007e98b458c252d0df5fc77d, type: 3}
@@ -11774,6 +11774,13 @@ MonoBehaviour:
   - {fileID: 2100000, guid: fa26aa27088ec1b4a9f5c07b0dd2b5bf, type: 2}
   - {fileID: 2100000, guid: f309f06676ce61948bbe2a98645d5a24, type: 2}
   - {fileID: 2100000, guid: 7a1b7fc602c09b74295e88a22accc4eb, type: 2}
+  playerColors:
+  - {r: 0.35294113, g: 0.35294116, b: 1, a: 1}
+  - {r: 0.35294116, g: 1, b: 0.35294116, a: 1}
+  - {r: 1, g: 0.35294116, b: 1, a: 1}
+  - {r: 1, g: 0.35294116, b: 0.35294113, a: 1}
+  - {r: 0.35294116, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 0.35294116, a: 1}
 --- !u!1 &1433873078
 GameObject:
   m_ObjectHideFlags: 0
@@ -13060,7 +13067,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 1, g: 0.37254903, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3529412, b: 1, a: 1}
   m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
@@ -13100,7 +13107,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 4

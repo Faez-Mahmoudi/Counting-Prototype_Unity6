@@ -6,6 +6,7 @@ public class ColorManager : MonoBehaviour
     [SerializeField] private GameObject playerTwo;
     
     [SerializeField] private Material[] playerMats;
+    [SerializeField] private Color[] playerColors;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,10 +25,12 @@ public class ColorManager : MonoBehaviour
         if (ID == 1)
         {
             playerOne.GetComponent<Renderer>().material = playerMats[colorNumber];
+            playerOne.GetComponent<Light>().color = playerColors[colorNumber];
         }
         else if (ID == 2)
         {
             playerTwo.GetComponent<Renderer>().material = playerMats[colorNumber];
+            playerTwo.GetComponent<Light>().color = playerColors[colorNumber];
         }
         
     }
