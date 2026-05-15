@@ -32,5 +32,6 @@ public class SetColors : MonoBehaviour
     void SendColor()
     {
         colorManager.SetColor(ID, colorNumber);
+        buttonAudio.PlayOneShot(clickSound, 1.0f);
     }
 }
