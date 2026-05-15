@@ -9,13 +9,19 @@ public class ColorManager : MonoBehaviour
     [SerializeField] private SpotLightColorChanger rightSpotLight;
     
     [SerializeField] private Material[] playerMats;
+    [SerializeField] private Material[] emissiveMats;
     [SerializeField] private Color[] playerColors;
+    [SerializeField] private GameObject[] leftSides;
+    [SerializeField] private GameObject[] rightSides;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         leftSpotLight = GameObject.Find("LeftSpotLights").GetComponent<SpotLightColorChanger>();
         rightSpotLight = GameObject.Find("RightSpotLights").GetComponent<SpotLightColorChanger>();
+        SetColor(1, 5);
+        SetColor(2, 2);
+
     }
 
     // Update is called once per frame
@@ -31,12 +37,22 @@ public class ColorManager : MonoBehaviour
             playerOne.GetComponent<Renderer>().material = playerMats[colorNumber];
             playerOne.GetComponent<Light>().color = playerColors[colorNumber];
             rightSpotLight.SetSpotLightColor(playerColors[colorNumber]);
+
+            foreach (var side in rightSides)
+            {
+                side.GetComponent<Renderer>().material = emissiveMats[colorNumber];
+            }
         }
         else if (ID == 2)
         {
             playerTwo.GetComponent<Renderer>().material = playerMats[colorNumber];
             playerTwo.GetComponent<Light>().color = playerColors[colorNumber];
             leftSpotLight.SetSpotLightColor(playerColors[colorNumber]);
+
+            foreach (var side in leftSides)
+            {
+                side.GetComponent<Renderer>().material = emissiveMats[colorNumber];
+            }
         }
         
     }
