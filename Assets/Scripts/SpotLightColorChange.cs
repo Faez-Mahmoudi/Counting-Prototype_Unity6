@@ -16,11 +16,12 @@ public class SpotLightColorChanger : MonoBehaviour
         
     }
 
-    public void SetSpotLightColor(Color m_color)
+    public void SetSpotLightColor(Color m_color, Material m_mat)
     {
         foreach (var spot in spotLights)
         {
             spot.GetComponent<Light>().color = m_color;
+            spot.GetComponent<Renderer>().material = m_mat;
         }
     }
 }

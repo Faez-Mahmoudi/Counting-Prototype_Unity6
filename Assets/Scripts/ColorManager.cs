@@ -19,7 +19,7 @@ public class ColorManager : MonoBehaviour
     {
         leftSpotLight = GameObject.Find("LeftSpotLights").GetComponent<SpotLightColorChanger>();
         rightSpotLight = GameObject.Find("RightSpotLights").GetComponent<SpotLightColorChanger>();
-        SetColor(1, 5);
+        SetColor(1, 4);
         SetColor(2, 2);
 
     }
@@ -36,7 +36,7 @@ public class ColorManager : MonoBehaviour
         {
             playerOne.GetComponent<Renderer>().material = playerMats[colorNumber];
             playerOne.GetComponent<Light>().color = playerColors[colorNumber];
-            rightSpotLight.SetSpotLightColor(playerColors[colorNumber]);
+            rightSpotLight.SetSpotLightColor(playerColors[colorNumber], emissiveMats[colorNumber]);
 
             foreach (var side in rightSides)
             {
@@ -47,7 +47,7 @@ public class ColorManager : MonoBehaviour
         {
             playerTwo.GetComponent<Renderer>().material = playerMats[colorNumber];
             playerTwo.GetComponent<Light>().color = playerColors[colorNumber];
-            leftSpotLight.SetSpotLightColor(playerColors[colorNumber]);
+            leftSpotLight.SetSpotLightColor(playerColors[colorNumber], emissiveMats[colorNumber]);
 
             foreach (var side in leftSides)
             {
