@@ -12136,6 +12136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64df87ae8e943848aa068ccf23bbecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonText: {fileID: 794464678}
   ID: 1
   clickSound: {fileID: 8300000, guid: 27f4b149557542a4cbcfdad914484fc4, type: 3}
 --- !u!82 &1448693609
@@ -13648,6 +13649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64df87ae8e943848aa068ccf23bbecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonText: {fileID: 1777445075}
   ID: 2
   clickSound: {fileID: 8300000, guid: 27f4b149557542a4cbcfdad914484fc4, type: 3}
 --- !u!82 &1654378320

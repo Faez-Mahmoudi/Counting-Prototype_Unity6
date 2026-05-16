@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(AudioSource))]
 
 public class ChangeOneTwoPlayer : MonoBehaviour
 {
     private Button button;
+    [SerializeField] TextMeshProUGUI buttonText;
     private SinglePlayer onePlayer;
     private PlayerController twoPlayer;
     [SerializeField] private int ID;
@@ -21,8 +23,6 @@ public class ChangeOneTwoPlayer : MonoBehaviour
        twoPlayer = GameObject.Find("Player1").GetComponent<PlayerController>();
        button.onClick.AddListener(SetEnabel);
        buttonAudio = GetComponent<AudioSource>(); 
-
-       
     }
 
     void Update()
@@ -42,6 +42,11 @@ public class ChangeOneTwoPlayer : MonoBehaviour
             onePlayer.enabled = false;
             twoPlayer.enabled = true;
         }
+
+        if (ID == 1)
+            buttonText.color = MainManager.Instance.leftUiColor;
+        else if (ID == 2)
+            buttonText.color = MainManager.Instance.rightUiColor; 
     }
 
     void SetEnabel()
