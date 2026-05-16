@@ -10,6 +10,9 @@ public class MainManager : MonoBehaviour
     public int orgMinutes;
     public bool isGameActive;
 
+    public Color leftUiColor;
+    public Color rightUiColor;
+
     public AudioSource my_audio;
 
     // Save our data

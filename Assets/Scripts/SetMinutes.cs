@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(AudioSource))]
 
 public class SetMinutes : MonoBehaviour
 {
     private Button button;
+    [SerializeField] private TextMeshProUGUI buttonText;
     private CountDownClock clock;
 
     [SerializeField] private int minutes;
@@ -28,6 +30,8 @@ public class SetMinutes : MonoBehaviour
             button.enabled = false;
         else
             button.enabled = true;
+
+        buttonText.color = MainManager.Instance.leftUiColor;
     }
 
     void SetTime()

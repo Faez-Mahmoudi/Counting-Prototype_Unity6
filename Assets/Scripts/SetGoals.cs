@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(AudioSource))]
 
 public class SetGoals : MonoBehaviour
 {
     private Button button;
+    [SerializeField] private TextMeshProUGUI buttonText;
     [SerializeField] private int goals;
 
     private AudioSource buttonAudio;
@@ -25,6 +27,8 @@ public class SetGoals : MonoBehaviour
             button.enabled = false;
         else
             button.enabled = true;
+
+        buttonText.color = MainManager.Instance.rightUiColor;
     }
 
     void SetGoalLimit()

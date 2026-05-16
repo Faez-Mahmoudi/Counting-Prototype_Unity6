@@ -38,6 +38,8 @@ public class ColorManager : MonoBehaviour
             playerOne.GetComponent<Light>().color = playerColors[colorNumber];
             rightSpotLight.SetSpotLightColor(playerColors[colorNumber], emissiveMats[colorNumber]);
 
+            MainManager.Instance.rightUiColor = playerColors[colorNumber];
+
             foreach (var side in rightSides)
             {
                 side.GetComponent<Renderer>().material = emissiveMats[colorNumber];
@@ -48,6 +50,8 @@ public class ColorManager : MonoBehaviour
             playerTwo.GetComponent<Renderer>().material = playerMats[colorNumber];
             playerTwo.GetComponent<Light>().color = playerColors[colorNumber];
             leftSpotLight.SetSpotLightColor(playerColors[colorNumber], emissiveMats[colorNumber]);
+
+            MainManager.Instance.leftUiColor = playerColors[colorNumber];
 
             foreach (var side in leftSides)
             {
