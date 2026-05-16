@@ -11680,6 +11680,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOne: {fileID: 588684618}
   playerTwo: {fileID: 1606078451}
+  basketText: {fileID: 1252102396}
+  battleText: {fileID: 109608282}
+  minutesText: {fileID: 1041557112}
+  goalsText: {fileID: 2008008634}
   leftSpotLight: {fileID: 0}
   rightSpotLight: {fileID: 0}
   playerMats:

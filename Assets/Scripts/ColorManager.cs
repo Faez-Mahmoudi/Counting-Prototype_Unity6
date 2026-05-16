@@ -1,9 +1,15 @@
 using UnityEngine;
+using TMPro;
 
 public class ColorManager : MonoBehaviour
 {
     [SerializeField] private GameObject playerOne;
     [SerializeField] private GameObject playerTwo;
+
+    [SerializeField] private TextMeshProUGUI basketText;
+    [SerializeField] private TextMeshProUGUI battleText;
+    [SerializeField] private TextMeshProUGUI minutesText;
+    [SerializeField] private TextMeshProUGUI goalsText;
 
     [SerializeField] private SpotLightColorChanger leftSpotLight;
     [SerializeField] private SpotLightColorChanger rightSpotLight;
@@ -27,7 +33,10 @@ public class ColorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        basketText.color = MainManager.Instance.leftUiColor;   
+        battleText.color = MainManager.Instance.rightUiColor;   
+        minutesText.color = MainManager.Instance.leftUiColor;   
+        goalsText.color = MainManager.Instance.rightUiColor;   
     }
 
     public void SetColor(int ID, int colorNumber)
