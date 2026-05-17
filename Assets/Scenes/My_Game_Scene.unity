@@ -11680,10 +11680,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOne: {fileID: 588684618}
   playerTwo: {fileID: 1606078451}
-  basketText: {fileID: 1252102396}
-  battleText: {fileID: 109608282}
-  minutesText: {fileID: 1041557112}
-  goalsText: {fileID: 2008008634}
+  leftSideTexts:
+  - {fileID: 1252102396}
+  - {fileID: 1041557112}
+  - {fileID: 892680844}
+  - {fileID: 474555187}
+  - {fileID: 1741569415}
+  - {fileID: 702566629}
+  - {fileID: 1486741158}
+  rightSideTexts:
+  - {fileID: 109608282}
+  - {fileID: 2008008634}
+  - {fileID: 272489454}
+  - {fileID: 573985364}
+  - {fileID: 2123896279}
+  - {fileID: 61194738}
+  - {fileID: 1403483439}
   leftSpotLight: {fileID: 0}
   rightSpotLight: {fileID: 0}
   playerMats:
