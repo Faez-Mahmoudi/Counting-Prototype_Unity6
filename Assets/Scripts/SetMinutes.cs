@@ -7,10 +7,11 @@ using TMPro;
 public class SetMinutes : MonoBehaviour
 {
     private Button button;
+    private Image image;
     [SerializeField] private TextMeshProUGUI buttonText;
-    private CountDownClock clock;
-
     [SerializeField] private int minutes;
+
+    private CountDownClock clock;
 
     private AudioSource buttonAudio;
     [SerializeField] AudioClip clickSound;
@@ -19,6 +20,7 @@ public class SetMinutes : MonoBehaviour
     void Start()
     {
        button = GetComponent<Button>();
+       image = GetComponent<Image>();
        clock = GameObject.Find("DigitalClock").GetComponent<CountDownClock>();
        button.onClick.AddListener(SetTime);
        buttonAudio = GetComponent<AudioSource>(); 
@@ -32,6 +34,7 @@ public class SetMinutes : MonoBehaviour
             button.enabled = true;
 
         buttonText.color = MainManager.Instance.leftUiColor;
+        image.color = MainManager.Instance.leftUiColor;
     }
 
     void SetTime()

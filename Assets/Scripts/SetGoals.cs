@@ -7,6 +7,7 @@ using TMPro;
 public class SetGoals : MonoBehaviour
 {
     private Button button;
+    private Image image;
     [SerializeField] private TextMeshProUGUI buttonText;
     [SerializeField] private int goals;
 
@@ -16,9 +17,10 @@ public class SetGoals : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       button = GetComponent<Button>();
-       button.onClick.AddListener(SetGoalLimit); 
-       buttonAudio = GetComponent<AudioSource>(); 
+        button = GetComponent<Button>();
+        image = GetComponent<Image>();
+        button.onClick.AddListener(SetGoalLimit); 
+        buttonAudio = GetComponent<AudioSource>(); 
     }
 
     void Update()
@@ -29,6 +31,7 @@ public class SetGoals : MonoBehaviour
             button.enabled = true;
 
         buttonText.color = MainManager.Instance.rightUiColor;
+        image.color = MainManager.Instance.rightUiColor;
     }
 
     void SetGoalLimit()
