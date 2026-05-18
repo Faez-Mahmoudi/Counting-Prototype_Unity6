@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class ColorManager : MonoBehaviour
@@ -8,6 +9,9 @@ public class ColorManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI[] leftSideTexts;
     [SerializeField] private TextMeshProUGUI[] rightSideTexts;
+
+    [SerializeField] private Button[] leftSideButtons;
+    [SerializeField] private Button[] rightSideButtons;
 
     [SerializeField] private SpotLightColorChanger leftSpotLight;
     [SerializeField] private SpotLightColorChanger rightSpotLight;
@@ -38,6 +42,18 @@ public class ColorManager : MonoBehaviour
         foreach (var text in rightSideTexts)
         {
             text.color = MainManager.Instance.rightUiColor;
+        }
+
+        foreach (var button in leftSideButtons)
+        {
+            Image image = button.GetComponent<Image>();
+            image.color = MainManager.Instance.leftUiColor;
+        }
+
+        foreach (var button in rightSideButtons)
+        {
+            Image image = button.GetComponent<Image>();
+            image.color = MainManager.Instance.rightUiColor;
         }  
     }
 
