@@ -7,6 +7,7 @@ using TMPro;
 public class ChangeOneTwoPlayer : MonoBehaviour
 {
     private Button button;
+    private Image image;
     [SerializeField] TextMeshProUGUI buttonText;
     private SinglePlayer onePlayer;
     private PlayerController twoPlayer;
@@ -19,6 +20,7 @@ public class ChangeOneTwoPlayer : MonoBehaviour
     void Start()
     {
        button = GetComponent<Button>();
+       image = GetComponent<Image>();
        onePlayer = GameObject.Find("Player1").GetComponent<SinglePlayer>();
        twoPlayer = GameObject.Find("Player1").GetComponent<PlayerController>();
        button.onClick.AddListener(SetEnabel);
@@ -44,9 +46,15 @@ public class ChangeOneTwoPlayer : MonoBehaviour
         }
 
         if (ID == 1)
+        {
             buttonText.color = MainManager.Instance.leftUiColor;
+            image.color = MainManager.Instance.leftUiColor;
+        }
         else if (ID == 2)
-            buttonText.color = MainManager.Instance.rightUiColor; 
+        {
+            buttonText.color = MainManager.Instance.rightUiColor;
+            image.color = MainManager.Instance.rightUiColor;
+        } 
     }
 
     void SetEnabel()
