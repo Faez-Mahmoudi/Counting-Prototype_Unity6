@@ -25,13 +25,16 @@ public class SetGoals : MonoBehaviour
 
     void Update()
     {
-        if (MainManager.Instance.orgGoals == goals)
-            button.enabled = false;
-        else
-            button.enabled = true;
+        if (!MainManager.Instance.isGameActive)
+        {
+            if (MainManager.Instance.orgGoals == goals)
+                button.enabled = false;
+            else
+                button.enabled = true;
 
-        buttonText.color = MainManager.Instance.rightUiColor;
-        image.color = MainManager.Instance.rightUiColor;
+            buttonText.color = MainManager.Instance.rightUiColor;
+            image.color = MainManager.Instance.rightUiColor;
+        }
     }
 
     void SetGoalLimit()

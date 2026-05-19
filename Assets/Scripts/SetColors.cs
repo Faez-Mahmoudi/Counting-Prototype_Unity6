@@ -23,15 +23,10 @@ public class SetColors : MonoBehaviour
         colorManager = GameObject.Find("CanvasWorldSpace").GetComponent<ColorManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void SendColor()
     {
         colorManager.SetColor(ID, colorNumber);
         buttonAudio.PlayOneShot(clickSound, 1.0f);
+        button.enabled = false;
     }
 }

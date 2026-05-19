@@ -28,13 +28,16 @@ public class SetMinutes : MonoBehaviour
 
     void Update()
     {
-        if (MainManager.Instance.orgMinutes == minutes)
-            button.enabled = false;
-        else
-            button.enabled = true;
+        if (!MainManager.Instance.isGameActive)
+        {
+            if (MainManager.Instance.orgMinutes == minutes)
+                button.enabled = false;
+            else
+                button.enabled = true;
 
-        buttonText.color = MainManager.Instance.leftUiColor;
-        image.color = MainManager.Instance.leftUiColor;
+            buttonText.color = MainManager.Instance.leftUiColor;
+            image.color = MainManager.Instance.leftUiColor;
+        }
     }
 
     void SetTime()

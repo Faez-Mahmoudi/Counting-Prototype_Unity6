@@ -38,8 +38,11 @@ public class UIHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            ChangePause();
+        if (MainManager.Instance.isGameActive)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                ChangePause();
+        }
     }
 
     public void StartGame()

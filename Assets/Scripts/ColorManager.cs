@@ -18,7 +18,9 @@ public class ColorManager : MonoBehaviour
     
     [SerializeField] private Material[] playerMats;
     [SerializeField] private Material[] emissiveMats;
+
     [SerializeField] private Color[] playerColors;
+
     [SerializeField] private GameObject[] leftSides;
     [SerializeField] private GameObject[] rightSides;
 
@@ -29,32 +31,6 @@ public class ColorManager : MonoBehaviour
         rightSpotLight = GameObject.Find("RightSpotLights").GetComponent<SpotLightColorChanger>();
         SetColor(1, 4);
         SetColor(2, 2);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        foreach (var text in leftSideTexts)
-        {
-            text.color = MainManager.Instance.leftUiColor;
-        }
-
-        foreach (var text in rightSideTexts)
-        {
-            text.color = MainManager.Instance.rightUiColor;
-        }
-
-        foreach (var button in leftSideButtons)
-        {
-            Image image = button.GetComponent<Image>();
-            image.color = MainManager.Instance.leftUiColor;
-        }
-
-        foreach (var button in rightSideButtons)
-        {
-            Image image = button.GetComponent<Image>();
-            image.color = MainManager.Instance.rightUiColor;
-        }  
     }
 
     public void SetColor(int ID, int colorNumber)
@@ -71,6 +47,17 @@ public class ColorManager : MonoBehaviour
             {
                 side.GetComponent<Renderer>().material = emissiveMats[colorNumber];
             }
+
+            foreach (var text in rightSideTexts)
+            {
+                text.color = MainManager.Instance.rightUiColor;
+            }
+
+            foreach (var button in rightSideButtons)
+            {
+                Image image = button.GetComponent<Image>();
+                image.color = MainManager.Instance.rightUiColor;
+            } 
         }
         else if (ID == 2)
         {
@@ -83,6 +70,17 @@ public class ColorManager : MonoBehaviour
             foreach (var side in leftSides)
             {
                 side.GetComponent<Renderer>().material = emissiveMats[colorNumber];
+            }
+
+            foreach (var text in leftSideTexts)
+            {
+                text.color = MainManager.Instance.leftUiColor;
+            }
+
+            foreach (var button in leftSideButtons)
+            {
+                Image image = button.GetComponent<Image>();
+                image.color = MainManager.Instance.leftUiColor;
             }
         }
         
