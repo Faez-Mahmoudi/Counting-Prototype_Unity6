@@ -27,6 +27,5 @@ public class SetColors : MonoBehaviour
     {
         colorManager.SetColor(ID, colorNumber);
         buttonAudio.PlayOneShot(clickSound, 1.0f);
-        button.enabled = false;
     }
 }

@@ -37,52 +37,32 @@ public class ColorManager : MonoBehaviour
     {
         if (ID == 1)
         {
-            playerOne.GetComponent<Renderer>().material = playerMats[colorNumber];
-            playerOne.GetComponent<Light>().color = playerColors[colorNumber];
-            rightSpotLight.SetSpotLightColor(playerColors[colorNumber], emissiveMats[colorNumber]);
-
             MainManager.Instance.rightUiColor = playerColors[colorNumber];
-
-            foreach (var side in rightSides)
-            {
-                side.GetComponent<Renderer>().material = emissiveMats[colorNumber];
-            }
-
-            foreach (var text in rightSideTexts)
-            {
-                text.color = MainManager.Instance.rightUiColor;
-            }
-
-            foreach (var button in rightSideButtons)
-            {
-                Image image = button.GetComponent<Image>();
-                image.color = MainManager.Instance.rightUiColor;
-            } 
+            MySetColorFunction(playerOne, rightSides, rightSpotLight, rightSideTexts, rightSideButtons, playerColors[colorNumber], MainManager.Instance.rightUiColor, playerMats[colorNumber], emissiveMats[colorNumber]);
         }
         else if (ID == 2)
         {
-            playerTwo.GetComponent<Renderer>().material = playerMats[colorNumber];
-            playerTwo.GetComponent<Light>().color = playerColors[colorNumber];
-            leftSpotLight.SetSpotLightColor(playerColors[colorNumber], emissiveMats[colorNumber]);
-
             MainManager.Instance.leftUiColor = playerColors[colorNumber];
-
-            foreach (var side in leftSides)
-            {
-                side.GetComponent<Renderer>().material = emissiveMats[colorNumber];
-            }
-
-            foreach (var text in leftSideTexts)
-            {
-                text.color = MainManager.Instance.leftUiColor;
-            }
-
-            foreach (var button in leftSideButtons)
-            {
-                Image image = button.GetComponent<Image>();
-                image.color = MainManager.Instance.leftUiColor;
-            }
-        }
-        
+            MySetColorFunction(playerTwo, leftSides, leftSpotLight, leftSideTexts, leftSideButtons, playerColors[colorNumber], MainManager.Instance.leftUiColor, playerMats[colorNumber], emissiveMats[colorNumber]);
+        }  
     }
+
+    private void MySetColorFunction(GameObject player,GameObject[] sides, SpotLightColorChanger spot, TextMeshProUGUI[] texts, Button[] buttons, Color color,Color mainColor, Material mat, Material emMat)
+    {
+        player.GetComponent<Renderer>().material = mat;
+        player.GetComponent<Light>().color = color;
+        spot.SetSpotLightColor(color, emMat);
+
+        foreach (var s in sides)
+            s.GetComponent<Renderer>().material = emMat;
+
+        foreach (var t in texts)
+            t.color = mainColor;
+
+        foreach (var b in buttons)
+        {
+            Image img = b.GetComponent<Image>();
+            img.color = mainColor;
+        }
+    } 
 }
