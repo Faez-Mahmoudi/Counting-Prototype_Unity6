@@ -11,7 +11,9 @@ public class MainManager : MonoBehaviour
     public bool isGameActive;
 
     public Color leftUiColor;
+    public int leftUiColorNumber;
     public Color rightUiColor;
+    public int rightUiColorNumber;
 
     public AudioSource my_audio;
 
@@ -23,6 +25,8 @@ public class MainManager : MonoBehaviour
         public float m_volume;
         public int org_goals;
         public int org_Min;
+        public int l_color;
+        public int r_color;
     }
 
     void Awake()
@@ -48,6 +52,8 @@ public class MainManager : MonoBehaviour
         data.m_volume = musicVolume;
         data.org_goals = orgGoals;
         data.org_Min = orgMinutes;
+        data.l_color = leftUiColorNumber;
+        data.r_color = rightUiColorNumber;
 
         string json  = JsonUtility.ToJson(data);
         File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
@@ -66,6 +72,8 @@ public class MainManager : MonoBehaviour
             musicVolume = data.m_volume;
             orgGoals = data.org_goals;
             orgMinutes = data.org_Min;
+            leftUiColorNumber = data.l_color;
+            rightUiColorNumber = data.r_color;
         }
         else
         {
@@ -73,6 +81,8 @@ public class MainManager : MonoBehaviour
             musicVolume = 0.5f;
             orgGoals = 7;
             orgMinutes = 3;
+            leftUiColorNumber = 2;
+            rightUiColorNumber = 4;
         }
     }
 }

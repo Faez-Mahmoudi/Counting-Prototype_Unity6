@@ -29,19 +29,23 @@ public class ColorManager : MonoBehaviour
     {
         leftSpotLight = GameObject.Find("LeftSpotLights").GetComponent<SpotLightColorChanger>();
         rightSpotLight = GameObject.Find("RightSpotLights").GetComponent<SpotLightColorChanger>();
-        SetColor(1, 4);
-        SetColor(2, 2);
+        SetColor(1, MainManager.Instance.rightUiColorNumber);
+        SetColor(2, MainManager.Instance.leftUiColorNumber);
     }
 
     public void SetColor(int ID, int colorNumber)
     {
         if (ID == 1)
         {
+            MainManager.Instance.rightUiColorNumber = colorNumber;
+
             MainManager.Instance.rightUiColor = playerColors[colorNumber];
             MySetColorFunction(playerOne, rightSides, rightSpotLight, rightSideTexts, rightSideButtons, playerColors[colorNumber], MainManager.Instance.rightUiColor, playerMats[colorNumber], emissiveMats[colorNumber]);
         }
         else if (ID == 2)
         {
+            MainManager.Instance.leftUiColorNumber = colorNumber;
+
             MainManager.Instance.leftUiColor = playerColors[colorNumber];
             MySetColorFunction(playerTwo, leftSides, leftSpotLight, leftSideTexts, leftSideButtons, playerColors[colorNumber], MainManager.Instance.leftUiColor, playerMats[colorNumber], emissiveMats[colorNumber]);
         }  
