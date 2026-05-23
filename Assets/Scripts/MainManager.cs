@@ -4,7 +4,6 @@ using System.IO;
 public class MainManager : MonoBehaviour
 {
     public static MainManager Instance{get; private set;}
-    public float musicVolume;
     public int numberOfPlayer;
     public int orgGoals;
     public int orgMinutes;
@@ -22,7 +21,6 @@ public class MainManager : MonoBehaviour
     class SaveData
     {
         public int n_player;
-        public float m_volume;
         public int org_goals;
         public int org_Min;
         public int l_color;
@@ -42,14 +40,13 @@ public class MainManager : MonoBehaviour
        my_audio = GetComponent<AudioSource>(); 
        isGameActive = false;
        LoadScore();
-       my_audio.volume = musicVolume;
+       my_audio.volume = 0.25f;
     }
 
     public void SaveScore()
     {
         SaveData data = new SaveData();
         data.n_player = numberOfPlayer;
-        data.m_volume = musicVolume;
         data.org_goals = orgGoals;
         data.org_Min = orgMinutes;
         data.l_color = leftUiColorNumber;
@@ -69,7 +66,6 @@ public class MainManager : MonoBehaviour
             SaveData data = JsonUtility.FromJson<SaveData>(json);
 
             numberOfPlayer = data.n_player;
-            musicVolume = data.m_volume;
             orgGoals = data.org_goals;
             orgMinutes = data.org_Min;
             leftUiColorNumber = data.l_color;
@@ -78,7 +74,6 @@ public class MainManager : MonoBehaviour
         else
         {
             numberOfPlayer = 1;
-            musicVolume = 0.5f;
             orgGoals = 7;
             orgMinutes = 3;
             leftUiColorNumber = 2;
