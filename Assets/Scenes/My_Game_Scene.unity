@@ -2541,6 +2541,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 770467267017967926, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -11566,7 +11574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1433873079
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13100,7 +13108,9 @@ MonoBehaviour:
   orgMinutes: 0
   isGameActive: 0
   leftUiColor: {r: 0, g: 0, b: 0, a: 0}
+  leftUiColorNumber: 0
   rightUiColor: {r: 0, g: 0, b: 0, a: 0}
+  rightUiColorNumber: 0
   my_audio: {fileID: 0}
 --- !u!82 &1641136469
 AudioSource:
@@ -17997,6 +18007,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 826963904}
     m_Modifications:
+    - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 770467267017967926, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

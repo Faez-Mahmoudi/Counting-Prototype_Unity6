@@ -8,6 +8,7 @@ public class SetColors : MonoBehaviour
     private ColorManager colorManager;
 
     private Button button;
+    private Image img;
     [SerializeField] private int colorNumber;
     [SerializeField] private int ID;
 
@@ -18,9 +19,27 @@ public class SetColors : MonoBehaviour
     void Start()
     {
         button = GetComponent<Button>();
+        img = GetComponent<Image>();
         button.onClick.AddListener(SendColor); 
         buttonAudio = GetComponent<AudioSource>();
         colorManager = GameObject.Find("CanvasWorldSpace").GetComponent<ColorManager>();
+    }
+
+    void Update()
+    {
+        if (!MainManager.Instance.isGameActive)
+        {
+            if ((ID == 1 && MainManager.Instance.leftUiColorNumber == colorNumber) || (ID == 2 && MainManager.Instance.rightUiColorNumber == colorNumber))
+            {
+                img.enabled = false;
+                button.enabled = false;
+            }
+            else
+            {
+                img.enabled = true;    
+                button.enabled = true;
+            }   
+        }
     }
 
     void SendColor()
