@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SinglePlayer : MonoBehaviour
 {
-    [SerializeField] private float speed = 5.0f;
+    [SerializeField] private float speed = 7.0f;
     [SerializeField] private float powerStrength = 3.0f;
     private Rigidbody playerRb;
     private GameObject ball;
