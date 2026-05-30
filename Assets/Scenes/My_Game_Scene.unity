@@ -4725,7 +4725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1b2ff03dadb3d468b01ea6209de34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 750
   powerStrength: 3
   hitBallSound: {fileID: 8300000, guid: fc5ca27665748ac4d9f2248d2fbc8478, type: 3}
   hitPlayerSound: {fileID: 8300000, guid: 6edbb83c007e98b458c252d0df5fc77d, type: 3}
@@ -5079,7 +5079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5931797569180888762, guid: 10c7d81f54fdc0149afaedd512403e30, type: 3}
       propertyPath: speed
-      value: 1100
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 5931797569180888762, guid: 10c7d81f54fdc0149afaedd512403e30, type: 3}
       propertyPath: m_Enabled
@@ -17948,7 +17948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5931797569180888762, guid: 10c7d81f54fdc0149afaedd512403e30, type: 3}
       propertyPath: speed
-      value: 1100
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 5931797569180888762, guid: 10c7d81f54fdc0149afaedd512403e30, type: 3}
       propertyPath: m_Enabled
@@ -18587,6 +18587,10 @@ PrefabInstance:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 8300000, guid: 8af8e8566ce4ad945a0bb7e7353f6a7f, type: 3}
+    - target: {fileID: 6469945268382247025, guid: 43729a7a1c67ced4cb60b2ae049c6733, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.72
+      objectReference: {fileID: 0}
     - target: {fileID: 8406309203615170205, guid: 43729a7a1c67ced4cb60b2ae049c6733, type: 3}
       propertyPath: m_Name
       value: InvisibleBorder

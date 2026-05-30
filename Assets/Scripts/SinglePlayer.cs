@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SinglePlayer : MonoBehaviour
 {
-    [SerializeField] private float speed = 7.0f;
+    [SerializeField] private float speed = 750.0f;
     [SerializeField] private float powerStrength = 3.0f;
     private Rigidbody playerRb;
     private GameObject ball;
@@ -25,7 +25,7 @@ public class SinglePlayer : MonoBehaviour
         if (MainManager.Instance.isGameActive && MainManager.Instance.numberOfPlayer == 1)
         {
             Vector3 lookDirection = (ball.transform.position - transform.position).normalized;
-            playerRb.AddForce(lookDirection * speed * Time.timeScale);
+            playerRb.AddForce(lookDirection * speed * Time.deltaTime);
 
             transform.rotation = Quaternion.identity;
             if (transform.position.x != 0)
