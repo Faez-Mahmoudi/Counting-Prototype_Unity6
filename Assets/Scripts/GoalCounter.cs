@@ -3,8 +3,8 @@ using TMPro;
 
 public class GoalCounter : MonoBehaviour
 {
-    [SerializeField] private int Count;
-    [SerializeField] private int goalLimit;
+    private int Count;
+    private int goalLimit;
     [SerializeField] private GameObject digitalScoreBoard;
     private DigitalNumber dgNumber;
 
@@ -18,8 +18,8 @@ public class GoalCounter : MonoBehaviour
         goalLimit = MainManager.Instance.orgGoals;
         uiHandler = GameObject.Find("CanvasWorldSpace").GetComponent<UIHandler>();
         dgNumber = digitalScoreBoard.GetComponent<DigitalNumber>();
-        netAudio = GetComponent<AudioSource>();
         dgNumber.ShowNumber(0);
+        netAudio = GetComponent<AudioSource>();
     }
 
     private void Update()

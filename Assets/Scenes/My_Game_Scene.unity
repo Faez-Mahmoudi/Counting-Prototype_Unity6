@@ -523,6 +523,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109608280}
   m_CullTransparentMesh: 1
+--- !u!1 &114345223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2155579090820643833, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+  m_PrefabInstance: {fileID: 360110614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &124938643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5335152241023433435, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
@@ -2541,12 +2546,24 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 29847582695977158, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Name
+      value: UpSensorLeft
+      objectReference: {fileID: 0}
     - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: m_Size.y
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403096146220050473, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: ID
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 770467267017967926, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
@@ -2561,6 +2578,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f733996cd3af3f843ae5ee67559c208c, type: 2}
+    - target: {fileID: 2155579090820643833, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Name
+      value: GoalSensorLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960043710395681814, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: digitalScoreBoard
+      value: 
+      objectReference: {fileID: 803746015}
     - target: {fileID: 3670163559304350381, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2617,6 +2642,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5115739369243931205, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: goalSensor
+      value: 
+      objectReference: {fileID: 114345223}
+    - target: {fileID: 5192122028521382504, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5192122028521382504, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: pointText
       value: 
@@ -2661,6 +2694,10 @@ PrefabInstance:
       propertyPath: m_BounceIntensity
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7187326658942231915, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Name
+      value: DownSensorLeft
+      objectReference: {fileID: 0}
     - target: {fileID: 7374787190967721542, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -2684,6 +2721,10 @@ PrefabInstance:
     - target: {fileID: 7817834556644830652, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849474163741416036, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8256965875085966422, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2725,7 +2766,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360110616}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -6617,7 +6658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1857333457934814950, guid: cd3f04758a943204f91e0c017f295e3b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.65
+      value: 3.46
       objectReference: {fileID: 0}
     - target: {fileID: 1857333457934814950, guid: cd3f04758a943204f91e0c017f295e3b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13253,6 +13294,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1643906388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2155579090820643833, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+  m_PrefabInstance: {fileID: 5711506041797098289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1648811350
 GameObject:
   m_ObjectHideFlags: 0
@@ -18057,10 +18103,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 220250525810161236, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403096146220050473, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: ID
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 770467267017967926, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
@@ -18071,6 +18121,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f733996cd3af3f843ae5ee67559c208c, type: 2}
+    - target: {fileID: 2960043710395681814, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: digitalScoreBoard
+      value: 
+      objectReference: {fileID: 441069805}
     - target: {fileID: 3913631331079841053, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: m_Name
       value: BasketBallNet_Right
@@ -18115,6 +18169,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5115739369243931205, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: goalSensor
+      value: 
+      objectReference: {fileID: 1643906388}
+    - target: {fileID: 5192122028521382504, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5192122028521382504, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: pointText
       value: 
@@ -18151,6 +18213,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f733996cd3af3f843ae5ee67559c208c, type: 2}
+    - target: {fileID: 7849474163741416036, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8256965875085966422, guid: 28989768e6fe6c04d85cb3013f56dc63, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -18186,7 +18252,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5711506041797098290}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
