@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 # if UNITY_EDITOR
 using UnityEditor;
 # endif
@@ -14,6 +15,7 @@ public class UIHandler : MonoBehaviour
     [SerializeField] private GameObject gameStartPanel;
     [SerializeField] private GameObject gamePausePanel;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private TextMeshProUGUI startCountDownText;
 
     private bool paused;
 
@@ -30,6 +32,8 @@ public class UIHandler : MonoBehaviour
         gameStartPanel.gameObject.SetActive(true);        
         gamePausePanel.gameObject.SetActive(false);        
         gameOverPanel.gameObject.SetActive(false);
+        startCountDownText.gameObject.SetActive(false);
+
 
         buttonAudio = GetComponent<AudioSource>();
         buttonAudio.PlayOneShot(clickSound, 1.0f);
@@ -47,11 +51,27 @@ public class UIHandler : MonoBehaviour
 
     public void StartGame()
     {
-        MainManager.Instance.isGameActive = true;
         gameStartPanel.gameObject.SetActive(false);        
-        Time.timeScale = 1;
-        MainManager.Instance.SaveScore();
         buttonAudio.PlayOneShot(clickSound, 1.0f);
+        MainManager.Instance.SaveScore();
+        Time.timeScale = 1;
+        StartCoroutine(GameStartCountDown());
+    }
+
+    IEnumerator GameStartCountDown()
+    {
+        startCountDownText.gameObject.SetActive(true);
+        startCountDownText.text = "3";
+        yield return new WaitForSeconds(1.0f);
+
+        startCountDownText.text = "2";
+        yield return new WaitForSeconds(1.0f);
+
+        startCountDownText.text = "1";
+        yield return new WaitForSeconds(1.0f);
+
+        startCountDownText.gameObject.SetActive(false);
+        MainManager.Instance.isGameActive = true;
     }
     
     public void ChangePause()
