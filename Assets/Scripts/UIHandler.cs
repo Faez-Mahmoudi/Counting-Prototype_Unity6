@@ -21,6 +21,8 @@ public class UIHandler : MonoBehaviour
 
     private AudioSource buttonAudio;
     [SerializeField] AudioClip clickSound;
+    [SerializeField] AudioClip countdownSound;
+    [SerializeField] AudioClip gameStartSound;
 
     void Start()
     {
@@ -62,16 +64,20 @@ public class UIHandler : MonoBehaviour
     {
         startCountDownText.gameObject.SetActive(true);
         startCountDownText.text = "3";
+        buttonAudio.PlayOneShot(countdownSound, 1.0f);
         yield return new WaitForSeconds(1.0f);
 
         startCountDownText.text = "2";
+        buttonAudio.PlayOneShot(countdownSound, 1.0f);
         yield return new WaitForSeconds(1.0f);
 
         startCountDownText.text = "1";
+        buttonAudio.PlayOneShot(countdownSound, 1.0f);
         yield return new WaitForSeconds(1.0f);
 
         startCountDownText.gameObject.SetActive(false);
         MainManager.Instance.isGameActive = true;
+        buttonAudio.PlayOneShot(gameStartSound, 1.0f);
     }
     
     public void ChangePause()

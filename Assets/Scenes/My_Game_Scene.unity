@@ -1295,7 +1295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &208730007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11414,6 +11414,8 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1903685608}
   startCountDownText: {fileID: 208730008}
   clickSound: {fileID: 8300000, guid: 18006151cb9782d43a871f6362ed3af5, type: 3}
+  countdownSound: {fileID: 8300000, guid: 18006151cb9782d43a871f6362ed3af5, type: 3}
+  gameStartSound: {fileID: 8300000, guid: 7bde814091b6bfc4a97313839e215de8, type: 3}
 --- !u!114 &1424703616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11695,7 +11697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1433873079
 RectTransform:
   m_ObjectHideFlags: 0
