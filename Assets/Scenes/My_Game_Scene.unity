@@ -11414,8 +11414,8 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1903685608}
   startCountDownText: {fileID: 208730008}
   clickSound: {fileID: 8300000, guid: 18006151cb9782d43a871f6362ed3af5, type: 3}
-  countdownSound: {fileID: 8300000, guid: 18006151cb9782d43a871f6362ed3af5, type: 3}
-  gameStartSound: {fileID: 8300000, guid: 7bde814091b6bfc4a97313839e215de8, type: 3}
+  countdownSound: {fileID: 8300000, guid: 425fae427cf5cf1458e4417d4fe4e90d, type: 3}
+  gameStartSound: {fileID: 8300000, guid: 686765c99eae4e449b43307cb7f6b06d, type: 3}
 --- !u!114 &1424703616
 MonoBehaviour:
   m_ObjectHideFlags: 0
