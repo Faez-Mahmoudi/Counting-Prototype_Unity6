@@ -15,11 +15,14 @@ public class ColorManager : MonoBehaviour
 
     [SerializeField] private SpotLightColorChanger leftSpotLight;
     [SerializeField] private SpotLightColorChanger rightSpotLight;
-    
+
     [SerializeField] private Material[] playerMats;
     [SerializeField] private Material[] emissiveMats;
 
     [SerializeField] private Color[] playerColors;
+
+    [SerializeField] private GameObject leftGameStartPanel;
+    [SerializeField] private GameObject rightGameStartPanel;
 
     [SerializeField] private GameObject[] leftSides;
     [SerializeField] private GameObject[] rightSides;
