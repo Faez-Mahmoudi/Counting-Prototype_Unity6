@@ -21,8 +21,8 @@ public class ColorManager : MonoBehaviour
 
     [SerializeField] private Color[] playerColors;
 
-    [SerializeField] private GameObject leftGameStartPanel;
-    [SerializeField] private GameObject rightGameStartPanel;
+    [SerializeField] private GameObject[] leftGameStartPanels;
+    [SerializeField] private GameObject[] rightGameStartPanels;
 
     [SerializeField] private GameObject[] leftSides;
     [SerializeField] private GameObject[] rightSides;
@@ -43,18 +43,18 @@ public class ColorManager : MonoBehaviour
             MainManager.Instance.rightUiColorNumber = colorNumber;
 
             MainManager.Instance.rightUiColor = playerColors[colorNumber];
-            MySetColorFunction(playerOne, rightGameStartPanel, rightSides, rightSpotLight, rightSideTexts, rightSideButtons, playerColors[colorNumber], MainManager.Instance.rightUiColor, playerMats[colorNumber], emissiveMats[colorNumber]);
+            MySetColorFunction(playerOne, rightGameStartPanels, rightSides, rightSpotLight, rightSideTexts, rightSideButtons, playerColors[colorNumber], MainManager.Instance.rightUiColor, playerMats[colorNumber], emissiveMats[colorNumber]);
         }
         else if (ID == 2)
         {
             MainManager.Instance.leftUiColorNumber = colorNumber;
 
             MainManager.Instance.leftUiColor = playerColors[colorNumber];
-            MySetColorFunction(playerTwo, leftGameStartPanel, leftSides, leftSpotLight, leftSideTexts, leftSideButtons, playerColors[colorNumber], MainManager.Instance.leftUiColor, playerMats[colorNumber], emissiveMats[colorNumber]);
+            MySetColorFunction(playerTwo, leftGameStartPanels, leftSides, leftSpotLight, leftSideTexts, leftSideButtons, playerColors[colorNumber], MainManager.Instance.leftUiColor, playerMats[colorNumber], emissiveMats[colorNumber]);
         }  
     }
 
-    private void MySetColorFunction(GameObject player,GameObject panel, GameObject[] sides, SpotLightColorChanger spot, TextMeshProUGUI[] texts, Button[] buttons, Color color,Color mainColor, Material mat, Material emMat)
+    private void MySetColorFunction(GameObject player,GameObject[] panels, GameObject[] sides, SpotLightColorChanger spot, TextMeshProUGUI[] texts, Button[] buttons, Color color,Color mainColor, Material mat, Material emMat)
     {
         player.GetComponent<Renderer>().material = mat;
         player.GetComponent<Light>().color = color;
@@ -72,7 +72,10 @@ public class ColorManager : MonoBehaviour
             img.color = mainColor;
         }
 
-        Image imgPanel = panel.GetComponent<Image>();
-        imgPanel.color = mainColor;
+        foreach (var p in panels)
+        {
+            Image imgPanel = p.GetComponent<Image>();
+            imgPanel.color = mainColor;   
+        }
     } 
 }

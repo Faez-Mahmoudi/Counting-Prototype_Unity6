@@ -11898,8 +11898,14 @@ MonoBehaviour:
   - {r: 1, g: 0.35294116, b: 0.35294113, a: 1}
   - {r: 0.35294116, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 0.35294116, a: 1}
-  leftGameStartPanel: {fileID: 1002575889}
-  rightGameStartPanel: {fileID: 1743000559}
+  leftGameStartPanels:
+  - {fileID: 1002575889}
+  - {fileID: 133089938}
+  - {fileID: 1193898327}
+  rightGameStartPanels:
+  - {fileID: 1743000559}
+  - {fileID: 991108976}
+  - {fileID: 813419419}
   leftSides:
   - {fileID: 634627528}
   - {fileID: 1730766311}
@@ -11937,7 +11943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1433873079
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16757,7 +16763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1903685609
 RectTransform:
   m_ObjectHideFlags: 0
