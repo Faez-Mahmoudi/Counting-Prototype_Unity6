@@ -1,6 +1,6 @@
 # Counting Prototype (Unity 6)
 
-![Cover Image](Screenshots/Prototype5_U6_1.jpg)
+![Cover Image](https://github.com/Faez-Mahmoudi/Counting-Prototype_Unity6/blob/main/Screenshots/Counting%20Prototype_Polished_02.jpg)
 
 **Prototype 5** is an arcade-style slicing game inspired by the classic Fruit Ninja, developed as part of the **Unity Junior Programmer Pathway (Unity 6)**.
 
