@@ -1,10 +1,15 @@
-# Counting Prototype (Unity 6)
+# Basket Battle (Unity 6)
 
 ![Cover Image](https://github.com/Faez-Mahmoudi/Counting-Prototype_Unity6/blob/main/Screenshots/Counting%20Prototype_Polished_02.jpg)
 
-**Prototype 5** is an arcade-style slicing game inspired by the classic Fruit Ninja, developed as part of the **Unity Junior Programmer Pathway (Unity 6)**.
+## 🏀 Basket Battle
 
-Players slice flying crates while avoiding dangerous objects, testing their reflexes and timing. The project focuses on implementing core gameplay systems, including object spawning, collision detection, score tracking, UI management, and game state logic.
+**Basket Battle** is a one- or two-player basketball game developed as part of the **Unity Junior Programmer Pathway (Counting Prototype)** and the **Unity Creative Core Pathway (Prototyping)**.
+
+Players control spherical characters and compete against each other by shooting the ball into the opponent's basket to score points.
+
+This project was created to practice and demonstrate **Unity gameplay mechanics, physics, player controls, game design, lighting, and visual effects**.
+
 
 ---
 
