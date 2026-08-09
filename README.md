@@ -15,7 +15,7 @@ This project was created to practice and demonstrate **Unity gameplay mechanics,
 
 ## ▶️ Play Demo
 
-- [🎮 Unity Play Demo](https://play.unity.com/en/games/5d11a7b7-a6ef-4564-9ec8-67f55f907446/prototype5ninja-crates) 
+- [🎮 Unity Play Demo](https://play.unity.com/en/games/57a33d23-da92-4a03-868d-3a893759deb1/basket-battel) 
 - [🌐 itch.io Demo](https://https://faez-mahmoudi.itch.io/prototype3)
 
 
