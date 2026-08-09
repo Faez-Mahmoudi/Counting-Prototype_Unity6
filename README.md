@@ -21,7 +21,7 @@ This project was created to practice and demonstrate **Unity gameplay mechanics,
 
 ## ▶️ Gameplay Video
 
-- [Watch Gameplay Video](Videos/Prototype5_U6_1080p.mp4)
+- [Watch Gameplay Video](https://github.com/Faez-Mahmoudi/Counting-Prototype_Unity6/blob/main/Videos/Basketbattel%20Polished%20720P%20Mute-2.m4v)
 
 ---
 
