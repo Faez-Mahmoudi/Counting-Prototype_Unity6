@@ -30,16 +30,20 @@ This project was created to practice and demonstrate **Unity gameplay mechanics,
 
 This project demonstrates core Unity skills including:
 
-- Physics-based object slicing
-- Collision detection and gameplay interactions
-- Dynamic object spawning system
-- Custom lighting and scene presentation
-- Responsive UI and HUD implementation
-- Score tracking and game state management
+- Physics-based basketball gameplay
+- Player movement and control systems
+- Ball physics and collision interactions
+- Score tracking and match timer systems
+- One- and two-player local gameplay
+- In-game UI and HUD implementation
+- Custom lighting and neon-style visual presentation
+- Emission materials and visual effects
+- Particle systems and gameplay effects
 - Audio and visual effects integration
-- Overall gameplay polish and optimization
+- Game state and menu management
+- Overall gameplay polish and presentation
 
-The goal of this prototype is to practice basic interactive game mechanics using Unity and C#.
+The goal of this project is to practice and demonstrate interactive basketball game mechanics using Unity and C#, while improving the visual presentation and gameplay feel of an earlier prototype.
 
 ---
 
