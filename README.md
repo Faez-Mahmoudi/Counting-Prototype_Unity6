@@ -45,13 +45,16 @@ The goal of this prototype is to practice basic interactive game mechanics using
 
 ## 🚀 Features
 
-- 📦 Slice airborne crates instead of fruit
-- ⚡ Simple and responsive slicing mechanics
-- 💥 Visual feedback on successful hits
-- 💡 Improved lighting and scene presentation
-- 🎨 Clean and intuitive UI
-- 🏆 Real-time score tracking
-- 🌐 WebGL support for instant browser play   
+- 🏀 1–2 player local basketball gameplay
+- 🎮 Player movement and controls
+- ⚽ Physics-based ball interaction
+- 🏆 Score and match timer system
+- 🎨 Custom neon-style visual design
+- 💡 Emission materials and dynamic lighting
+- ✨ Particle systems and visual effects
+- 🎥 Camera and gameplay presentation
+- 🖥️ In-game UI and menu system
+- 🔄 Pause, resume, and menu functionality
 
 ---
 
