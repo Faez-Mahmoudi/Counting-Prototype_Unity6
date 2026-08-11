@@ -78,4 +78,4 @@ The goal of this project is to practice and demonstrate interactive basketball g
 
 ### 🔹 Clone the repository
 ```bash
-git clone https://github.com/Faez-Mahmoudi/Prototype5_Unity6.git
+git clone https://github.com/Faez-Mahmoudi/Counting-Prototype_Unity6.git
