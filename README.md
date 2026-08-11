@@ -64,11 +64,13 @@ The goal of this project is to practice and demonstrate interactive basketball g
 
 ## 🎮 How to Play
 
-- 🖱️ Move the mouse across the screen to slash crates.
-- 📦 Hit as many flying crates as possible.
-- ⚡ React quickly as the game speed increases.
-- 💀 Avoid hitting dangerous obstacles.
-- ❌ Avoid missing too many crates and aim for the best score.  
+* 🕹️ Use **WASD** to control Player 1.
+* 🎮 Use the **Arrow Keys** to control Player 2.
+* 🏀 Move around the court and hit the ball toward the opponent's basket.
+* 🥅 Score by getting the ball into the opponent's basket.
+* 🛡️ Defend your basket and try to stop your opponent from scoring.
+* 🏆 Score more points than your opponent to win the game.
+  
 
 ---
 
